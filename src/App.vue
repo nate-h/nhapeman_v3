@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/" class="test">Homee</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
@@ -9,6 +9,9 @@
 </template>
 
 <style lang="scss">
+.test {
+  color: $red !important;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
