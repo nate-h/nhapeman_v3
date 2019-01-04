@@ -11,3 +11,6 @@
 
   * Footer
     * Contact link
+
+
+Take previous home, resume, projects.
