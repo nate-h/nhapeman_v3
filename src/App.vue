@@ -10,7 +10,7 @@
 
 <style lang="scss">
 .test {
-  color: $red !important;
+  color: $color1 !important;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
