@@ -35,8 +35,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-    @import "~scss/main.scss";
-
     $img-side: 200px;
 
     .project-container {
