@@ -38,115 +38,105 @@
 </template>
 
 <script>
-
-import JobContainer from '@/components/Job.vue';
-import AboutMeContainer from '@/components/AboutMe.vue';
+import JobContainer from "@/components/Job.vue";
+import AboutMeContainer from "@/components/AboutMe.vue";
 
 export default {
-    name: 'HomeContainer',
-    data () {
+    name: "HomeContainer",
+    data() {
         return {
             links: [
-                {'name': 'About Me', 'link': 'aboutme'},
-                {'name': 'Job History', 'link': 'jobhistory'},
-                {'name': 'Projects', 'link': 'projects'}
+                { name: "About Me", link: "aboutme" },
+                { name: "Job History", link: "jobhistory" },
+                { name: "Projects", link: "projects" }
             ]
         };
     },
     components: {
-        'job-container': JobContainer,
-        'about-me-container': AboutMeContainer
+        "job-container": JobContainer,
+        "about-me-container": AboutMeContainer
     },
-    methods: {
-
-    },
-    created () {
-        this.$store.commit('setLinks', this.links);
+    methods: {},
+    created() {
+        this.$store.commit("setLinks", this.links);
     }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.root-div {
+    width: 100%;
 
-    .root-div {
-
+    .home-container-body {
+        align-items: center;
+        background-color: white;
+        display: flex;
+        flex-flow: column;
+        margin-top: 250px;
+        vertical-align: middle;
         width: 100%;
 
-        .home-container-body {
-
-            align-items: center;
-            background-color: white;
-            display: flex;
-            flex-flow: column;
-            margin-top: 250px;
-            vertical-align: middle;
-            width: 100%;
-
-            & > * {
-                flex: 1 0 auto;
-
-                &:not(.parallax-hero) {
-                    max-width: map-get($breakpoints, large);
-                }
-            }
-
-            & > h1 {
-                background-color: $light1;
-                padding: $padding-large;
-                z-index: 999;
-            }
-        }
-    }
-
-    .parallax-hero {
-
-        background-image: url('~img/forest.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        height: 250px;
-        justify-content: center;
-        position: fixed;
-        text-align: center;
-        -webkit-transform: translateZ(0);
-        width: calc(100% - 220px);
-        z-index: -1;
-
-        .parallax-hero-text {
-            color: white;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-            font-family: "Montserrat", sans-serif;
-            background-color: $bg-shadow;
-        }
-    }
-
-    h1 + div {
-        border-top: solid 1px #e4e6e8;
-        padding-top: 30px !important;
-        margin-top: -30px !important;
-    }
-
-    .horizontal {
-
-        display: flex;
-        flex-direction: row;
-        margin: 0;
-
-        div:not(:first-child) {
-            margin-left: $margin-small;
-        }
-
-        div:not(:last-child) {
-            margin-right: $margin-small;
-        }
-
         & > * {
-            flex: 1;
+            flex: 1 0 auto;
+
+            &:not(.parallax-hero) {
+                max-width: map-get($breakpoints, large);
+            }
         }
 
+        & > h1 {
+            background-color: $light1;
+            padding: $padding-large;
+            z-index: 999;
+        }
+    }
+}
+
+.parallax-hero {
+    background-image: url("~img/forest.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: center;
+    position: fixed;
+    text-align: center;
+    -webkit-transform: translateZ(0);
+    width: calc(100% - 220px);
+    z-index: -1;
+
+    .parallax-hero-text {
+        color: white;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        font-family: "Montserrat", sans-serif;
+        background-color: $bg-shadow;
+    }
+}
+
+h1 + div {
+    border-top: solid 1px #e4e6e8;
+    padding-top: 30px !important;
+    margin-top: -30px !important;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+
+    div:not(:first-child) {
+        margin-left: $margin-small;
     }
 
+    div:not(:last-child) {
+        margin-right: $margin-small;
+    }
+
+    & > * {
+        flex: 1;
+    }
+}
 </style>

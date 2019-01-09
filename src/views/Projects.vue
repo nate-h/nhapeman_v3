@@ -21,54 +21,46 @@
 
 <script>
 export default {
-    name: 'ProjectContainer',
-    data () {
-        return {
-        };
+    name: "ProjectContainer",
+    data() {
+        return {};
     },
-    props: [
-        'name', 'img', 'link', 'big-project', 'video'
-    ]
+    props: ["name", "img", "link", "big-project", "video"]
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$img-side: 200px;
 
-    $img-side: 200px;
+.project-container {
+    @extend %container;
 
-    .project-container {
+    display: inline-flex;
+    flex-direction: row;
+    text-align: left;
 
-        @extend %container;
-
-        display: inline-flex;
-        flex-direction: row;
-        text-align: left;
-
-        // If big project, make container full width.
-        &.big-project {
-
-        }
-
-        &:not(.big-project) {
-
-        }
-
-        .leftside {
-            flex-grow: 0;
-            flex-shrink: 0;
-            margin-right: $padding-large;
-        }
-
-        .rightside {
-            flex-grow: 1;
-            padding: $padding-small;
-        }
-
-        img:first-of-type {
-            height:200px;
-            width:200px;
-
-        }
+    // If big project, make container full width.
+    &.big-project {
     }
+
+    &:not(.big-project) {
+    }
+
+    .leftside {
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: $padding-large;
+    }
+
+    .rightside {
+        flex-grow: 1;
+        padding: $padding-small;
+    }
+
+    img:first-of-type {
+        height: 200px;
+        width: 200px;
+    }
+}
 </style>

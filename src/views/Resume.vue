@@ -8,35 +8,30 @@
 </template>
 
 <script>
-
 export default {
-    name: 'Resume',
-    data () {
+    name: "Resume",
+    data() {
         return {
-            msg: 'Welcome to Your Vue.js App',
-            links: [
-                {'name': 'Home', 'link': '/home'}
-            ]
+            msg: "Welcome to Your Vue.js App",
+            links: [{ name: "Home", link: "/home" }]
         };
     },
-    created () {
-        this.$store.commit('setLinks', this.links);
+    created() {
+        this.$store.commit("setLinks", this.links);
     }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    .root-div {
+.root-div {
+    background-color: #525659;
+    overflow: hidden !important;
+    width: calc(100% - 220px);
 
-        background-color: #525659;
-        overflow: hidden !important;
-        width: calc(100% - 220px);
-
-        .pdf {
-            width: 100%;
-            height: 100%;
-        }
+    .pdf {
+        width: 100%;
+        height: 100%;
     }
-
+}
 </style>

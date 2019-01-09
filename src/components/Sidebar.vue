@@ -42,142 +42,132 @@
 </template>
 
 <script>
-
 export default {
-    name: 'SidebarContainer',
-    data () {
+    name: "SidebarContainer",
+    data() {
         return {
             routes: {}
         };
     },
     props: [],
     methods: {
-        linkClick (link) {
-            console.log('link', link);
+        linkClick(link) {
+            console.log("link", link);
         },
-        isActive (link) {
+        isActive(link) {
             return link.name === this.$route.name;
         }
     },
-    watch: {
-
-    },
-    created () {
+    watch: {},
+    created() {
         this.routes = this.$router.options.routes;
-        console.log('this.routes', this.routes);
+        console.log("this.routes", this.routes);
     }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.sidebar-container {
+    background-color: $dark0;
+    flex-shrink: 0;
+    padding: $padding-large;
+    width: 220px;
 
-    .sidebar-container {
+    a {
+        @extend %v-center;
+    }
 
-        background-color: $dark0;
-        flex-shrink: 0;
-        padding: $padding-large;
-        width: 220px;
+    img {
+        height: 6rem;
+        margin: 0;
+        padding: 0;
+        margin-right: $margin;
+        width: 6rem;
 
-        a {
-            @extend %v-center;
+        -webkit-transition: -webkit-transform 0.8s ease-in-out;
+        transition: transform 0.8s ease-in-out;
+    }
+
+    span {
+        color: $light1;
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo-blob {
+        @extend %h-center;
+
+        .logo:hover {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
         }
+    }
 
-        img {
-            height: 6rem;
+    .link-holder {
+        //@extend %h-center;
+        margin-top: $margin-xxx-large;
+
+        .link-buttons {
+            @extend %button;
+
+            background-color: transparent;
             margin: 0;
-            padding: 0;
-            margin-right: $margin;
-            width: 6rem;
 
-            -webkit-transition: -webkit-transform .8s ease-in-out;
-            transition: transform .8s ease-in-out;
-        }
-
-        span {
-            color: $light1;
-            font-size: 2rem;
-            margin: 0;
-            padding: 0;
-        }
-
-        .logo-blob {
-
-            @extend %h-center;
-
-            .logo:hover {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
+            &.active span {
+                color: $color2;
+                -webkit-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                transform: scale(1.05);
+                transition: all $transition-time $transition-function;
             }
-        }
 
-        .link-holder {
+            span {
+                color: $light1;
 
-            //@extend %h-center;
-            margin-top: $margin-xxx-large;
-
-            .link-buttons {
-
-                @extend %button;
-
-                background-color: transparent;
-                margin: 0;
-
-                &.active span {
-                    color: $color2;
+                &:hover {
+                    color: $color1;
                     -webkit-transform: scale(1.05);
                     -ms-transform: scale(1.05);
                     transform: scale(1.05);
                     transition: all $transition-time $transition-function;
                 }
 
-                span {
-                    color: $light1;
-
-                    &:hover {
-                        color: $color1;
-                        -webkit-transform: scale(1.05);
-                        -ms-transform: scale(1.05);
-                        transform: scale(1.05);
-                        transition: all $transition-time $transition-function;
-                    }
-
-                    &:active {
-                        color: $color2;
-                        -webkit-transform: scale(1.05);
-                        -ms-transform: scale(1.05);
-                        transform: scale(1.05);
-                        transition: all $transition-time $transition-function;
-                    }
-                }
-            }
-        }
-
-        .social-links {
-
-            @extend %h-center;
-
-            margin-top: auto;
-
-            & > * {
-                margin: 4px;
-            }
-
-            .svg-link {
-                fill: $light1;
-                color: $light1;
-
-                &:hover {
-                    fill: $color1;
-                    color: $color1;
-                }
-
                 &:active {
-                    fill: $color2;
                     color: $color2;
+                    -webkit-transform: scale(1.05);
+                    -ms-transform: scale(1.05);
+                    transform: scale(1.05);
+                    transition: all $transition-time $transition-function;
                 }
             }
         }
-
     }
+
+    .social-links {
+        @extend %h-center;
+
+        margin-top: auto;
+
+        & > * {
+            margin: 4px;
+        }
+
+        .svg-link {
+            fill: $light1;
+            color: $light1;
+
+            &:hover {
+                fill: $color1;
+                color: $color1;
+            }
+
+            &:active {
+                fill: $color2;
+                color: $color2;
+            }
+        }
+    }
+}
 </style>

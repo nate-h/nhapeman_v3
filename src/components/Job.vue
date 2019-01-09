@@ -21,46 +21,40 @@
 
 <script>
 export default {
-    name: 'JobContainer',
-    data () {
-        return {
-        };
+    name: "JobContainer",
+    data() {
+        return {};
     },
-    props: [
-        'company', 'img', 'link', 'years', 'short-description'
-    ]
+    props: ["company", "img", "link", "years", "short-description"]
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$img-side: 200px;
 
-    $img-side: 200px;
+.job-container {
+    @extend %container;
 
-    .job-container {
+    .leftside {
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: $padding-large;
+        width: $img-side;
+    }
 
-        @extend %container;
+    .rightside {
+        flex-grow: 1;
 
-        .leftside {
-            flex-grow: 0;
-            flex-shrink: 0;
-            margin-right: $padding-large;
-            width: $img-side;
-        }
-
-        .rightside {
-            flex-grow: 1;
-
-            .date {
-                margin-left: $margin-large;
-                color: $dark3;
-            }
-        }
-
-        img:first-of-type {
-            height:200px;
-            width:200px;
-
+        .date {
+            margin-left: $margin-large;
+            color: $dark3;
         }
     }
+
+    img:first-of-type {
+        height: 200px;
+        width: 200px;
+    }
+}
 </style>

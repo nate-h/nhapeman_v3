@@ -38,41 +38,41 @@
 
 <script>
 export default {
-    name: 'AboutMe',
-    data () {
-        return {
-        };
+    name: "AboutMe",
+    data() {
+        return {};
     }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.about-me-container {
+    @extend %container;
 
-    .about-me-container {
+    .row {
+        &:not(:first-child) {
+            margin-left: $margin;
+        }
+        &:not(:last-child) {
+            margin-right: $margin;
+        }
 
-        @extend %container;
+        ul {
+            list-style: none;
 
-        .row {
+            li {
+                &.question {
+                    color: $dark2;
+                    margin-top: $margin-small;
+                }
 
-            &:not(:first-child) { margin-left: $margin; }
-            &:not(:last-child) { margin-right: $margin; }
-
-            ul {
-                list-style: none;
-
-                li {
-                    &.question {
-                        color: $dark2;
-                        margin-top: $margin-small;
-                    }
-
-                    &.answer {
-                        color: $dark1;
-                        font-weight: $fw-bold;
-                    }
+                &.answer {
+                    color: $dark1;
+                    font-weight: $fw-bold;
                 }
             }
         }
     }
+}
 </style>
