@@ -58,7 +58,7 @@ export default {
     },
     methods: {},
     created() {
-        this.$store.commit("setLinks", this.links);
+        //this.$store.commit("setLinks", this.links);
     }
 };
 </script>

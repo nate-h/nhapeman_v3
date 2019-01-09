@@ -1,7 +1,7 @@
 <template>
   <div class="root-div">
     <embed class="pdf"
-        :src="require('root/resume/Nathanial.Hapeman.Resume.pdf')"
+        :src="require('resume/Nathanial.Hapeman.Resume.pdf')"
         type='application/pdf'
     >
   </div>
@@ -17,7 +17,7 @@ export default {
         };
     },
     created() {
-        this.$store.commit("setLinks", this.links);
+        //this.$store.commit("setLinks", this.links);
     }
 };
 </script>
