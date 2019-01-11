@@ -1,17 +1,13 @@
 <template>
     <div class="root-div">
 
-        <div class="parallax-hero">
-            <div class="parallax-hero-text">
-                <h1>Hi there! I'm Nathanial Hapeman.</h1>
-                <h2>And I love to code!</h2>
-            </div>
-        </div>
-
-        <div class="home-container-body">
+        <div>
             <h1 id="aboutme">About Me</h1>
             <about-me-container></about-me-container>
 
+        </div>
+
+        <div>
             <!-- Inject Job Components -->
             <h1 id="jobhistory">Job History</h1>
 
@@ -66,53 +62,24 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .root-div {
+    padding: $padding;
     width: 100%;
+    @extend %h-center;
 
-    .home-container-body {
+    & > * {
         align-items: center;
         background-color: white;
         display: flex;
         flex-flow: column;
-        margin-top: 250px;
         vertical-align: middle;
-        width: 100%;
-
-        & > * {
-            flex: 1 0 auto;
-
-            &:not(.parallax-hero) {
-                max-width: map-get($breakpoints, large);
-            }
-        }
+        max-width: map-get($breakpoints, large);
+        flex: 1 0 auto;
 
         & > h1 {
             background-color: $light1;
             padding: $padding-large;
             z-index: 999;
         }
-    }
-}
-
-.parallax-hero {
-    background-image: url("~img/forest.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    height: 250px;
-    justify-content: center;
-    position: fixed;
-    text-align: center;
-    -webkit-transform: translateZ(0);
-    width: calc(100% - 220px);
-    z-index: -1;
-
-    .parallax-hero-text {
-        color: white;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-        font-family: "Montserrat", sans-serif;
-        background-color: $bg-shadow;
     }
 }
 

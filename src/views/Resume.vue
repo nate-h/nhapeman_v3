@@ -26,12 +26,13 @@ export default {
 <style scoped lang="scss">
 .root-div {
     background-color: #525659;
-    overflow: hidden !important;
-    width: calc(100% - 220px);
+    height: 100%;
+    overflow: none;
 
     .pdf {
         width: 100%;
         height: 100%;
+        //flex-grow: 0;
     }
 }
 </style>

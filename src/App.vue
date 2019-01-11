@@ -22,20 +22,25 @@ export default {
 
 <style lang="scss">
 #app {
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-}
-#nav {
-    padding: 30px;
-    a {
-        font-weight: bold;
-        color: #2c3e50;
-        &.router-link-exact-active {
-            color: #42b983;
-        }
+    // font-family: "Avenir", Helvetica, Arial, sans-serif;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+    // color: #2c3e50;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .nav-bar {
+        flex: 0 1 auto;
     }
+
+    .root-div {
+        flex: 1 1 auto;
+    }
+
+    // &.router-link-exact-active {
+    //     color: #42b983;
+    // }
 }
 </style>

@@ -10,9 +10,8 @@
 }
 
 html, body {
-    display: flex;
-    flex-direction: column;
     height: 100%;
+    margin: 0
 }
 
 html {
@@ -24,12 +23,8 @@ html {
 
 body {
     -webkit-font-smoothing: antialiased;
-    //background-image: url('~img/bg.png');
-    //background-color: black;
+    background-image: url('~img/bg.png');
     color: $dark1;
-    margin: 0;
-    min-height: 100%;
-    padding: 0;
     text-rendering: optimizeLegibility;
 }
 

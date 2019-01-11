@@ -1,5 +1,5 @@
 <template>
-  <header class="root-div t-to-b">
+  <header class="nav-bar l-to-r">
 
       <div class="logo-blob">
           <img src="~img/logo.png" class="logo">
@@ -11,8 +11,8 @@
           </div>
       </div>
 
-      <div class="link-holder">
-          <div v-for="link in routes" :key="link.name">
+      <div class="link-holder l-to-r">
+          <div class='center' v-for="link in routes" :key="link.name">
               <router-link :to="link.path">
                   <button class="link-buttons" v-bind:class="{active: isActive(link)}">
                       <span>{{link.name}}</span>
@@ -20,31 +20,31 @@
               </router-link>
 
               <!-- Iterate on child paths -->
-              <div v-for="childLink in link.children" :key="childLink.name">
+              <!-- <div v-for="childLink in link.children" :key="childLink.name">
                   <router-link :to="link.path + '/' + childLink.path">
                       <button class="link-buttons" v-bind:class="{active: isActive(childLink)}">
                           <span>{{childLink.name}}</span>
                       </button>
                   </router-link>
-              </div>
+              </div> -->
           </div>
       </div>
 
-      <div class="social-links">
+      <!-- <div class="social-links">
           <svg-link src="~img/linkedin.svg" link="https://www.linkedin.com/in/nhapeman/">
               LinkedIn
           </svg-link>
           <svg-link src="~img/github.svg" link="https://github.com/nate-h">
               Github
           </svg-link>
-      </div>
+      </div> -->
   </header>
 </template>
 
 
 <script>
 export default {
-    name: "NavBarContainer",
+    name: "NavBar",
     data() {
         return {
             routes: {}
@@ -69,11 +69,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.root-div {
+.nav-bar {
     background-color: $dark0;
-    flex-shrink: 0;
     padding: $padding-large;
-    width: 220px;
 
     a {
         @extend %v-center;
@@ -98,7 +96,7 @@ export default {
     }
 
     .logo-blob {
-        @extend %h-center;
+        @extend %v-center;
 
         .logo:hover {
             -webkit-transform: rotate(360deg);
@@ -107,7 +105,7 @@ export default {
     }
 
     .link-holder {
-        margin-top: $margin-xxx-large;
+        margin-left: auto;
 
         .link-buttons {
             @extend %button;
@@ -146,9 +144,7 @@ export default {
     }
 
     .social-links {
-        @extend %h-center;
-
-        margin-top: auto;
+        @extend %v-center;
 
         & > * {
             margin: 4px;
