@@ -1,5 +1,5 @@
 <template>
-  <header class="sidebar-container t-to-b">
+  <header class="root-div t-to-b">
 
       <div class="logo-blob">
           <img src="~img/logo.png" class="logo">
@@ -41,9 +41,10 @@
   </header>
 </template>
 
+
 <script>
 export default {
-    name: "SidebarContainer",
+    name: "NavBarContainer",
     data() {
         return {
             routes: {}
@@ -68,7 +69,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.sidebar-container {
+.root-div {
     background-color: $dark0;
     flex-shrink: 0;
     padding: $padding-large;
@@ -106,7 +107,6 @@ export default {
     }
 
     .link-holder {
-        //@extend %h-center;
         margin-top: $margin-xxx-large;
 
         .link-buttons {
