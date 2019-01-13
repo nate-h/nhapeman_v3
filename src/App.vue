@@ -5,7 +5,7 @@
       <router-link to="/resume">Resume</router-link>
     </div> -->
     <nav-bar/>
-    <router-view/>
+    <router-view class="route-base"/>
   </div>
 </template>
 
@@ -25,18 +25,18 @@ export default {
     // font-family: "Avenir", Helvetica, Arial, sans-serif;
     // -webkit-font-smoothing: antialiased;
     // -moz-osx-font-smoothing: grayscale;
-    // color: #2c3e50;
 
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
+    //overflow: hidden;
 
     .nav-bar {
-        flex: 0 1 auto;
+        flex: 0 0 auto;
     }
 
-    .root-div {
-        flex: 1 1 auto;
+    .route-base {
+        flex: 1 0 auto;
     }
 
     // &.router-link-exact-active {

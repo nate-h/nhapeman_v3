@@ -1,5 +1,5 @@
 <template>
-    <div class="root-div">
+    <div class="home">
 
         <div>
             <h1 id="aboutme">About Me</h1>
@@ -61,9 +61,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.root-div {
+.home {
     padding: $padding;
-    width: 100%;
     @extend %h-center;
 
     & > * {
@@ -87,23 +86,5 @@ h1 + div {
     border-top: solid 1px #e4e6e8;
     padding-top: 30px !important;
     margin-top: -30px !important;
-}
-
-.horizontal {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-
-    div:not(:first-child) {
-        margin-left: $margin-small;
-    }
-
-    div:not(:last-child) {
-        margin-right: $margin-small;
-    }
-
-    & > * {
-        flex: 1;
-    }
 }
 </style>

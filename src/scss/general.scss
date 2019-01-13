@@ -10,7 +10,6 @@
 }
 
 html, body {
-    height: 100%;
     margin: 0
 }
 
@@ -200,4 +199,8 @@ p, ul, ol, li, td, input, button, label {
 .centered {
     margin: $margin 0;
     text-align: center;
+}
+
+.red {
+    color: red;
 }

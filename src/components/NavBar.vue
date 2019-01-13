@@ -71,18 +71,18 @@ export default {
 <style scoped lang="scss">
 .nav-bar {
     background-color: $dark0;
-    padding: $padding-large;
+    padding: $padding;
 
     a {
         @extend %v-center;
     }
 
     img {
-        height: 6rem;
+        height: 4.5rem;
         margin: 0;
         padding: 0;
         margin-right: $margin;
-        width: 6rem;
+        width: 4.5rem;
 
         -webkit-transition: -webkit-transform 0.8s ease-in-out;
         transition: transform 0.8s ease-in-out;

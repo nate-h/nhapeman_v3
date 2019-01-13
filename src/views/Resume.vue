@@ -1,5 +1,5 @@
 <template>
-  <div class="root-div">
+  <div class="resume">
     <embed class="pdf"
         :src="require('resume/Nathanial.Hapeman.Resume.pdf')"
         type='application/pdf'
@@ -24,15 +24,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.root-div {
-    background-color: #525659;
-    height: 100%;
-    overflow: none;
+.resume {
+    display: flex;
 
     .pdf {
         width: 100%;
-        height: 100%;
-        //flex-grow: 0;
     }
 }
 </style>
