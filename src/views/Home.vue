@@ -74,6 +74,10 @@ export default {
         max-width: map-get($breakpoints, large);
         flex: 1 0 auto;
 
+        &:not(:last-child) {
+            margin-bottom: $margin;
+        }
+
         & > h1 {
             background-color: $light1;
             padding: $padding-large;
