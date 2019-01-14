@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////
-// Nathanial Hapeman's Resume Website v2.0
+// Nathanial Hapeman's Resume Website v3.0
 // File: general.scss
 // Purpose: Define reusable classes for project.
 ///////////////////////////////////////////////////////////////////////////////
@@ -18,10 +18,11 @@ html {
     font-family: $text-font-stack;
     font-size: 62.5%;
     min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
     background-image: url('~img/bg.png');
     color: $dark1;
     text-rendering: optimizeLegibility;
@@ -93,70 +94,6 @@ p, ul, ol, li, td, input, button, label {
 
 .trace {
     border: 1px dashed rgba(254, 1, 1, 0.9);
-}
-
-%box-shadow {
-    box-shadow: 0 4px 6px 0 $shadow;
-}
-
-%container {
-    //@extend .trace;
-    //border-radius: 3px;
-    //border-top: 1px solid #e4e6e8;
-    margin: $margin-small 0;
-    padding: $padding-large;
-}
-
-%button {
-    background-color: $color1;
-    border: none;
-    margin: $margin-small;
-    outline: none;
-    padding: $padding-small;
-}
-
-%v-center {
-    align-items: center;
-    display: inline-flex;
-    vertical-align: middle;
-}
-
-%h-center {
-    align-items: center;
-    display: inline-flex;
-    flex-direction: column;
-    vertical-align: middle;
-}
-
-////////////////////////////////////////////////////////////////////////
-// direction-layouts
-////////////////////////////////////////////////////////////////////////
-
-%direction-layouts {
-
-    display: flex;
-    flex-wrap: nowrap;
-    text-align: center;
-
-    .grow {
-        flex-basis: 0;
-        flex-grow: 1;
-        flex-shrink: 1;
-    }
-
-    &.equal > * {
-        flex-basis: 0;
-        flex-grow: 1;
-        flex-shrink: 1;
-    }
-
-    &.la {
-        text-align: left;
-    }
-
-    &.ra {
-        text-align: right;
-    }
 }
 
 .l-to-r {

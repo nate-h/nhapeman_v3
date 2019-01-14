@@ -30,14 +30,11 @@
           </div>
       </div>
 
-      <!-- <div class="social-links">
-          <svg-link src="~img/linkedin.svg" link="https://www.linkedin.com/in/nhapeman/">
-              LinkedIn
-          </svg-link>
-          <svg-link src="~img/github.svg" link="https://github.com/nate-h">
-              Github
-          </svg-link>
-      </div> -->
+      <!-- <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/resume">Resume</router-link>
+    </div> -->
+
   </header>
 </template>
 
@@ -68,10 +65,14 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
 .nav-bar {
     background-color: $dark0;
     padding: $padding;
+
+    // &.router-link-exact-active {
+    //     color: #42b983;
+    // }
 
     a {
         @extend %v-center;
@@ -139,29 +140,6 @@ export default {
                     transform: scale(1.05);
                     transition: all $transition-time $transition-function;
                 }
-            }
-        }
-    }
-
-    .social-links {
-        @extend %v-center;
-
-        & > * {
-            margin: 4px;
-        }
-
-        .svg-link {
-            fill: $light1;
-            color: $light1;
-
-            &:hover {
-                fill: $color1;
-                color: $color1;
-            }
-
-            &:active {
-                fill: $color2;
-                color: $color2;
             }
         }
     }

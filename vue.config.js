@@ -8,6 +8,9 @@ module.exports = {
             }
         }
     },
+    chainWebpack: config => {
+        config.module.rules.delete("svg");
+    },
     configureWebpack: {
         resolve: {
             alias: {
@@ -21,12 +24,16 @@ module.exports = {
                     test: /\.(pdf)(\?.*)?$/,
                     use: [
                         {
-                            loader: 'url-loader',
+                            loader: "url-loader",
                             options: {
-                                name: 'files/[name].[hash:8].[ext]'
+                                name: "files/[name].[hash:8].[ext]"
                             }
                         }
                     ]
+                },
+                {
+                    test: /\.svg$/,
+                    loader: "vue-svg-loader"
                 }
             ]
         }

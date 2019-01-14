@@ -9,7 +9,6 @@
               of my professional career as a simulation developer but have been doing
               front-end development for the past year. When I'm not watching Netflix
               or hanging out with friends, I'm probably coding.
-
           </p>
 
       </div>
@@ -46,7 +45,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
 .about-me-container {
     @extend %container;
 
