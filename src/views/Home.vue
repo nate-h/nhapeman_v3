@@ -62,7 +62,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 .home {
-    padding: $padding;
+    padding: $padding-large;
     @extend %h-center;
 
     & > * {
@@ -75,7 +75,7 @@ export default {
         flex: 1 0 auto;
 
         &:not(:last-child) {
-            margin-bottom: $margin;
+            margin-bottom: $margin-large;
         }
 
         & > h1 {
