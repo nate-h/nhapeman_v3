@@ -1,14 +1,14 @@
 <template>
     <a :href="link" class="svg-link">
-        <div v-once v-html="src" class="svg-injector"></div>
-        <p class="svg-label"><slot></slot></p>
+        <slot></slot>
+        <p class="svg-label">{{label}}</p>
     </a>
 
 </template>
 
 <script>
 export default {
-    props: ["src", "link", "color-off", "color-hover", "color-down"]
+    props: ["link", "label", "color-off", "color-hover", "color-down"]
 };
 </script>
 
@@ -20,7 +20,7 @@ $logo-size: 25px;
 
     transition: all $transition-time $transition-function;
 
-    .svg-injector {
+    svg {
         height: $logo-size;
         width: $logo-size;
     }

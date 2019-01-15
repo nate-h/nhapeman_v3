@@ -1,40 +1,34 @@
 <template>
-  <footer class="my-footer l-to-r">
+  <footer class="my-footer">
 
-      <div class="conact">
-          <div class="vertical-rows">
-              <a href="mailto:nhapeman@gmail.com?Subject=Hey%20Nate" target="_top">
-                  <h1>Contact Info</h1>
-              </a>
-              <a href="mailto:nhapeman@gmail.com?Subject=Hey%20Nate" target="_top">
-                  <h2>nhapeman@gmail.com</h2>
-              </a>
-          </div>
+      <div class="contact">
+            <a href="mailto:nhapeman@gmail.com?Subject=Hey%20Nate" target="_top">
+                <h1>Contact Info</h1>
+            </a>test
+            <a href="mailto:nhapeman@gmail.com?Subject=Hey%20Nate" target="_top">
+                <h2>nhapeman@gmail.com</h2>
+            </a>
       </div>
 
       <div class="social-links">
-          <test class="svg-link"/>
-          <svg-link src="~img/linkedin.svg" link="https://www.linkedin.com/in/nhapeman/">
-              LinkedIn
+          <svg-link link="https://www.linkedin.com/in/nhapeman/">
+            <linkedin-svg/>
           </svg-link>
-          <svg-link src="~img/github.svg" link="https://github.com/nate-h">
-              Github
+          <svg-link link="https://github.com/nate-h">
+            <github-svg/>
           </svg-link>
       </div>
+
   </footer>
 </template>
 
 
 <script>
-import test from "img/linkedin.svg";
+import linkedinSvg from "img/linkedin.svg";
+import githubSvg from "img/github.svg";
 
 export default {
     name: "MyFooter",
-    data() {
-        return {
-            routes: {}
-        };
-    },
     props: [],
     methods: {
         linkClick(link) {
@@ -45,12 +39,9 @@ export default {
         }
     },
     watch: {},
-    created() {
-        this.routes = this.$router.options.routes;
-        console.log("this.routes", this.routes);
-    },
     components: {
-        test
+        linkedinSvg,
+        githubSvg
     }
 };
 </script>
@@ -60,23 +51,11 @@ export default {
 .my-footer {
     background-color: $dark0;
     padding: $padding;
-
-    a {
-        @extend %v-center;
-    }
-
-    .conact {
-        @extend %v-center;
-
-        .logo:hover {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-        }
-    }
+    @extend %l-to-r;
 
     .social-links {
         margin-left: auto;
-        @extend %v-center;
+        @extend %l-to-r;
 
         & > * {
             margin: 4px;
@@ -85,8 +64,6 @@ export default {
         .svg-link {
             fill: $light1;
             color: $light1;
-            height: 10px;
-            width: 10px;
 
             &:hover {
                 fill: $color1;

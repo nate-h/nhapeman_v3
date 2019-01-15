@@ -29,6 +29,26 @@
     }
 }
 
+%l-to-r {
+    @extend %direction-layouts;
+    flex-direction: row;
+}
+
+%r-to-l {
+    @extend %direction-layouts;
+    flex-direction: row-reverse;
+}
+
+%t-to-b {
+    @extend %direction-layouts;
+    flex-direction: column;
+}
+
+%b-to-t {
+    @extend %direction-layouts;
+    flex-direction: column-reverse;
+}
+
 ////////////////////////////////////////////////////////////////////////
 // Misc
 ////////////////////////////////////////////////////////////////////////
@@ -56,6 +76,7 @@
 %v-center {
     align-items: center;
     display: inline-flex;
+    flex-direction: row;
     vertical-align: middle;
 }
 
