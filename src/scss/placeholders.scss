@@ -27,6 +27,14 @@
     &.ra {
         text-align: right;
     }
+
+    &%la {
+        text-align: left;
+    }
+
+    &%ra {
+        text-align: right;
+    }
 }
 
 %l-to-r {
@@ -71,18 +79,4 @@
     margin: $margin-small;
     outline: none;
     padding: $padding-small;
-}
-
-%v-center {
-    align-items: center;
-    display: inline-flex;
-    flex-direction: row;
-    vertical-align: middle;
-}
-
-%h-center {
-    align-items: center;
-    display: inline-flex;
-    flex-direction: column;
-    vertical-align: middle;
 }

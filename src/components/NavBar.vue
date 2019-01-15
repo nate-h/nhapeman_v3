@@ -3,7 +3,7 @@
 
       <div class="logo-blob">
           <img src="~img/logo.png" class="logo">
-          <div class="vertical-rows">
+          <div>
               <a href="#">
                   <h1>Nathanial Hapeman</h1>
               </a>
@@ -74,10 +74,6 @@ export default {
     //     color: #42b983;
     // }
 
-    a {
-        @extend %v-center;
-    }
-
     img {
         height: 4.5rem;
         margin: 0;
@@ -97,7 +93,7 @@ export default {
     }
 
     .logo-blob {
-        @extend %v-center;
+        @extend %l-to-r, %la;
 
         .logo:hover {
             -webkit-transform: rotate(360deg);

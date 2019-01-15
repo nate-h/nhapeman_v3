@@ -86,35 +86,15 @@ p, ul, ol, li, td, input, button, label {
     float: left;
 }
 
-.vertical-rows {
-    display: inline-flex;
-    flex-direction: column;
-    text-align: center;
-}
-
 .trace {
     border: 1px dashed rgba(254, 1, 1, 0.9);
 }
 
-.l-to-r {
-    @extend %direction-layouts;
-    flex-direction: row;
-}
+.l-to-r {@extend %l-to-r;}
+.r-to-l {@extend %r-to-l;}
+.t-to-b {@extend %t-to-b;}
+.b-to-t {@extend %b-to-t;}
 
-.r-to-l {
-    @extend %direction-layouts;
-    flex-direction: row-reverse;
-}
-
-.t-to-b {
-    @extend %direction-layouts;
-    flex-direction: column;
-}
-
-.b-to-t {
-    @extend %direction-layouts;
-    flex-direction: column-reverse;
-}
 
 .center {
     align-items: center;

@@ -63,7 +63,7 @@ export default {
 <style lang="scss">
 .home {
     padding: $padding-large;
-    @extend %h-center;
+    @extend %t-to-b;
 
     & > * {
         align-items: center;

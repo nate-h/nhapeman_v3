@@ -4,7 +4,7 @@
       <div class="contact">
             <a href="mailto:nhapeman@gmail.com?Subject=Hey%20Nate" target="_top">
                 <h1>Contact Info</h1>
-            </a>test
+            </a>
             <a href="mailto:nhapeman@gmail.com?Subject=Hey%20Nate" target="_top">
                 <h2>nhapeman@gmail.com</h2>
             </a>
@@ -51,7 +51,7 @@ export default {
 .my-footer {
     background-color: $dark0;
     padding: $padding;
-    @extend %l-to-r;
+    @extend %l-to-r, %la;
 
     .social-links {
         margin-left: auto;
