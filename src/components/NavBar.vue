@@ -1,6 +1,7 @@
 <template>
   <header class="nav-bar l-to-r">
 
+      <!-- Logo -->
       <div class="logo-blob">
           <img src="~img/logo.png" class="logo">
           <div>
@@ -11,30 +12,24 @@
           </div>
       </div>
 
+      <!-- Links -->
       <div class="link-holder l-to-r">
-          <div class='center' v-for="link in routes" :key="link.name">
-              <router-link :to="link.path">
-                  <button class="link-buttons" v-bind:class="{active: isActive(link)}">
-                      <span>{{link.name}}</span>
-                  </button>
-              </router-link>
+        <router-link v-for="link in routes"
+                    :key="link.name"
+                    :to="link.path" class="link"
+        >
+          <span>{{link.name}}</span>
+        </router-link>
 
-              <!-- Iterate on child paths -->
-              <!-- <div v-for="childLink in link.children" :key="childLink.name">
-                  <router-link :to="link.path + '/' + childLink.path">
-                      <button class="link-buttons" v-bind:class="{active: isActive(childLink)}">
-                          <span>{{childLink.name}}</span>
-                      </button>
-                  </router-link>
-              </div> -->
-          </div>
+        <!-- Iterate on child paths -->
+        <!-- <div v-for="childLink in link.children" :key="childLink.name">
+            <router-link :to="link.path + '/' + childLink.path">
+                <button class="link-buttons">
+                    <span>{{childLink.name}}</span>
+                </button>
+            </router-link>
+        </div> -->
       </div>
-
-      <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/resume">Resume</router-link>
-    </div> -->
-
   </header>
 </template>
 
@@ -51,9 +46,6 @@ export default {
     methods: {
         linkClick(link) {
             console.log("link", link);
-        },
-        isActive(link) {
-            return link.name === this.$route.name;
         }
     },
     watch: {},
@@ -70,10 +62,6 @@ export default {
     background-color: $dark0;
     padding: $padding;
 
-    // &.router-link-exact-active {
-    //     color: #42b983;
-    // }
-
     img {
         height: 4.5rem;
         margin: 0;
@@ -85,15 +73,8 @@ export default {
         transition: transform 0.8s ease-in-out;
     }
 
-    span {
-        color: $light1;
-        font-size: 2rem;
-        margin: 0;
-        padding: 0;
-    }
-
     .logo-blob {
-        @extend %l-to-r, %la;
+        @extend %l-to-r, .lt;
 
         .logo:hover {
             -webkit-transform: rotate(360deg);
@@ -104,38 +85,20 @@ export default {
     .link-holder {
         margin-left: auto;
 
-        .link-buttons {
-            @extend %button;
+        @extend %l-to-r, .ca;
 
-            background-color: transparent;
+        a.link {
+            color: $light1;
+            font-size: 2rem;
             margin: 0;
+            padding: $padding-small;
 
-            &.active span {
-                color: $color2;
-                -webkit-transform: scale(1.05);
-                -ms-transform: scale(1.05);
-                transform: scale(1.05);
-                transition: all $transition-time $transition-function;
+            &.router-link-exact-active {
+                @extend %active-effect;
             }
 
-            span {
-                color: $light1;
-
-                &:hover {
-                    color: $color1;
-                    -webkit-transform: scale(1.05);
-                    -ms-transform: scale(1.05);
-                    transform: scale(1.05);
-                    transition: all $transition-time $transition-function;
-                }
-
-                &:active {
-                    color: $color2;
-                    -webkit-transform: scale(1.05);
-                    -ms-transform: scale(1.05);
-                    transform: scale(1.05);
-                    transition: all $transition-time $transition-function;
-                }
+            &:hover {
+                @extend %hover-effect;
             }
         }
     }

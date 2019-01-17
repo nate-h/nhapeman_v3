@@ -29,16 +29,6 @@ import githubSvg from "img/github.svg";
 
 export default {
     name: "MyFooter",
-    props: [],
-    methods: {
-        linkClick(link) {
-            console.log("link", link);
-        },
-        isActive(link) {
-            return link.name === this.$route.name;
-        }
-    },
-    watch: {},
     components: {
         linkedinSvg,
         githubSvg
@@ -51,7 +41,7 @@ export default {
 .my-footer {
     background-color: $dark0;
     padding: $padding;
-    @extend %l-to-r, %la;
+    @extend %l-to-r, .lt;
 
     .social-links {
         margin-left: auto;

@@ -20,20 +20,16 @@
         flex-shrink: 1;
     }
 
-    &.la {
+    &.lt {
         text-align: left;
     }
 
-    &.ra {
+    &.rt {
         text-align: right;
     }
 
-    &%la {
-        text-align: left;
-    }
-
-    &%ra {
-        text-align: right;
+    &.ca {
+        align-items: center;
     }
 }
 
@@ -74,9 +70,21 @@
 }
 
 %button {
-    background-color: $color1;
-    border: none;
-    margin: $margin-small;
-    outline: none;
-    padding: $padding-small;
+    color: red;
+}
+
+%hover-effect {
+    color: $color1;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: all $transition-time $transition-function;
+}
+
+%active-effect {
+    color: $color2;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: all $transition-time $transition-function;
 }

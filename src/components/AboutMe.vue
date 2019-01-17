@@ -1,5 +1,5 @@
 <template>
-  <div class="about-me-container l-to-r equal la">
+  <div class="about-me-container l-to-r equal lt">
       <!-- Content inserted here! -->
       <div class="row">
           <h2> About Me </h2>

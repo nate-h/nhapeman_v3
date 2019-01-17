@@ -1,5 +1,5 @@
 <template>
-  <div class="job-container l-to-r la">
+  <div class="job-container l-to-r lt">
       <!-- Content inserted here! -->
       <div class="leftside">
         <img :src="img">
