@@ -95,13 +95,14 @@ export default {
         @extend %l-to-r, .ca;
 
         a.link {
-            color: $light1;
+            //color: $color1;
             font-size: 2rem;
             margin: 0;
             padding: $padding-small;
 
             &.router-link-exact-active {
                 @extend %active-effect;
+                color: $light1;
             }
 
             &:hover:not(.router-link-exact-active) {

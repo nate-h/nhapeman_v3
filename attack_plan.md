@@ -17,3 +17,4 @@ Take previous home, resume, projects.
 
 # TODO
 * rewrite about me and job
+* start project
