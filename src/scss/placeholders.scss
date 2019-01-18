@@ -73,18 +73,20 @@
     color: red;
 }
 
+%pop {
+    transition: all $transition-time $transition-function;
+
+    &:hover {
+        -webkit-transform: scale($scale);
+        -ms-transform: scale($scale);
+        transform: scale($scale);
+    }
+}
+
 %hover-effect {
     color: $color1;
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-    transition: all $transition-time $transition-function;
 }
 
 %active-effect {
     color: $color2;
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-    transition: all $transition-time $transition-function;
 }

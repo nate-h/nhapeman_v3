@@ -14,9 +14,10 @@
 
       <!-- Links -->
       <div class="link-holder l-to-r">
-        <router-link v-for="link in routes"
-                    :key="link.name"
-                    :to="link.path" class="link"
+        <router-link class="link"
+                     v-for="link in routes"
+                     :key="link.name"
+                     :to="link.path"
         >
           <span>{{link.name}}</span>
         </router-link>
@@ -97,8 +98,8 @@ export default {
                 @extend %active-effect;
             }
 
-            &:hover {
-                @extend %hover-effect;
+            &:hover:not(&.router-link-exact-active) {
+                @extend %hover-effect, %pop;
             }
         }
     }

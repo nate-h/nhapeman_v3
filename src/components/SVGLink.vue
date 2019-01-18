@@ -16,7 +16,7 @@ export default {
 $logo-size: 25px;
 
 .svg-link {
-    @extend %l-to-r;
+    @extend %l-to-r, %pop;
 
     transition: all $transition-time $transition-function;
 

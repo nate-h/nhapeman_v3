@@ -4,7 +4,6 @@
         <div>
             <h1 id="aboutme">About Me</h1>
             <about-me-container></about-me-container>
-
         </div>
 
         <div>
@@ -63,7 +62,13 @@ export default {
 <style lang="scss">
 .home {
     padding: $padding-large;
-    @extend %t-to-b;
+    @extend %t-to-b, .ca;
+
+    h1 + div {
+        border-top: solid 1px #e4e6e8;
+        padding-top: 30px !important;
+        margin-top: -30px !important;
+    }
 
     & > * {
         align-items: center;
@@ -84,11 +89,5 @@ export default {
             z-index: 999;
         }
     }
-}
-
-h1 + div {
-    border-top: solid 1px #e4e6e8;
-    padding-top: 30px !important;
-    margin-top: -30px !important;
 }
 </style>
