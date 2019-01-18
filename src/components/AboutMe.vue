@@ -18,13 +18,12 @@
       </div>
       <div class="row">
 
-          <h2> Details </h2>
-
+          <h2>Details</h2>
           <ul>
               <li class="question">Name:</li>
               <li class="answer">Nathanial Hapeman</li>
               <li class="question">Age:</li>
-              <li class="answer">28</li>
+              <li class="answer">{{my_rough_age()}}</li>
               <li class="question">Location:</li>
               <li class="answer">Los Angeles, CA</li>
               <li class="question">Education:</li>
@@ -40,6 +39,14 @@ export default {
     name: "AboutMe",
     data() {
         return {};
+    },
+    methods: {
+        my_rough_age() {
+            var bday = new Date("1990-03-01");
+            var ageDifMs = Date.now() - bday.getTime();
+            var ageDate = new Date(ageDifMs);
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
+        }
     }
 };
 </script>
