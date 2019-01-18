@@ -98,7 +98,7 @@ export default {
                 @extend %active-effect;
             }
 
-            &:hover:not(&.router-link-exact-active) {
+            &:hover:not(.router-link-exact-active) {
                 @extend %hover-effect, %pop;
             }
         }
