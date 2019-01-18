@@ -4,11 +4,11 @@
       <!-- Logo -->
       <div class="logo-blob">
           <img src="~img/logo.png" class="logo">
-          <div>
-              <a href="#">
-                  <h1>Nathanial Hapeman</h1>
-              </a>
-              <h2>Software Engineer</h2>
+          <div class="me t-to-b lt">
+              <router-link to="/">
+                <h1>Nathanial Hapeman</h1>
+                <h2>Software Engineer</h2>
+              </router-link>
           </div>
       </div>
 
@@ -80,6 +80,12 @@ export default {
         .logo:hover {
             -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+        }
+
+        .me {
+            a {
+                @extend %pop;
+            }
         }
     }
 
