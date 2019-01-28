@@ -13,16 +13,14 @@ export default {
 </script>
 
 <style lang="scss">
-$logo-size: 25px;
-
 .svg-link {
     @extend %l-to-r, %pop;
 
     transition: all $transition-time $transition-function;
 
     svg {
-        height: $logo-size;
-        width: $logo-size;
+        height: $logo;
+        width: $logo;
     }
 
     .svg-label {

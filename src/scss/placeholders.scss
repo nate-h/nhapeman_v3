@@ -90,3 +90,8 @@
 %active-effect {
     color: $color2;
 }
+
+%slow-fx {
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+}

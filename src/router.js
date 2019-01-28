@@ -21,7 +21,14 @@ export default new Router({
         {
             path: "/projects",
             name: "Projects",
-            component: Projects
+            component: Projects,
+            has_dropdown: true,
+            children: [
+                // {
+                //   path: 'profile',
+                //   component: UserProfile
+                // }
+            ]
         }
     ]
 });
