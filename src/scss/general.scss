@@ -39,6 +39,10 @@ a {
     text-decoration: none;
 }
 
+.router-link {
+    @extend %router-link;
+}
+
 @for $i from 1 through length($heading-sizes) {
     h#{$i} {
         font-size: $heading-sizes($i);

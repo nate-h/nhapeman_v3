@@ -17,21 +17,22 @@
         <!-- Routes with dropsdown -->
         <div class="dropdown" v-if="link.has_dropdown">
           <div class="label">
-            <router-link class="link" :to="link.path">
+            <router-link class="router-link" :to="link.path">
               <span>{{link.name}}</span>
+              <arrow-svg/>
             </router-link>
-            <arrow-svg/>
           </div>
 
           <div class="list">
-            <span>test 1</span>
-            <span>test 2</span>
-            <span>test 12345678910</span>
+            <router-link class="router-link" v-for="sub_link in ['/home', '/resume']"
+                         :to="sub_link" :key="sub_link">
+              <span>{{sub_link}}</span>
+            </router-link>
           </div>
         </div>
 
         <!-- Routes without dropsdown -->
-        <router-link class="link" :to="link.path" v-if="!link.has_dropdown">
+        <router-link class="router-link" :to="link.path" v-if="!link.has_dropdown">
           <span>{{link.name}}</span>
         </router-link>
       </div>
@@ -80,15 +81,6 @@ export default {
 .dropdown {
     vertical-align: middle;
     position: relative;
-
-    svg {
-        @extend %slow-fx;
-
-        fill: $light1;
-        height: $logo-small;
-        transform: rotate(180deg);
-        width: $logo-small;
-    }
 
     .label {
         @extend %l-to-r, .ca;
@@ -156,24 +148,9 @@ export default {
     }
 
     .link-holder {
-        margin-left: auto;
-
         @extend %l-to-r, .ca;
 
-        a.link {
-            font-size: 2rem;
-            margin: 0;
-            padding: $padding-small;
-
-            &.router-link-exact-active {
-                @extend %active-effect;
-                color: $light1;
-            }
-
-            &:hover:not(.router-link-exact-active) {
-                @extend %hover-effect, %pop;
-            }
-        }
+        margin-left: auto;
     }
 }
 </style>

@@ -85,13 +85,47 @@
 
 %hover-effect {
     color: $color1;
+    fill: $color1;
 }
 
 %active-effect {
     color: $color2;
+    fill: $color2;
 }
 
-%slow-fx {
-    -webkit-transition: -webkit-transform 0.25s ease-in-out;
-    transition: transform 0.25s ease-in-out;
+%fast-fx {
+    -webkit-transition: -webkit-transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out;
+}
+
+%router-link {
+    @extend %l-to-r, .ca;
+    font-size: 2rem;
+    margin: 0;
+    padding: $padding-small;
+
+    svg {
+        @extend %fast-fx;
+
+        margin-left: $margin-small;
+        height: $logo-small;
+        width: $logo-small;
+        transform: rotate(180deg);
+
+        fill: $color2;
+        padding: 0;
+        color: $color2;
+    }
+
+    &.router-link-exact-active {
+        @extend %active-effect;
+        color: $light1;
+        svg {
+            fill: $light1;
+        }
+    }
+
+    &:hover:not(.router-link-exact-active) {
+        @extend %hover-effect, %pop;
+    }
 }
