@@ -1,10 +1,7 @@
 <template>
     <div class="home">
 
-        <div>
-            <h1 id="aboutme">About Me</h1>
-            <about-me-container></about-me-container>
-        </div>
+        <about-me-container></about-me-container>
 
         <div>
             <!-- Inject Job Components -->
@@ -63,31 +60,5 @@ export default {
 .home {
     padding: $padding-large;
     @extend %t-to-b, .ca;
-
-    h1 + div {
-        border-top: solid 1px #e4e6e8;
-        padding-top: 30px !important;
-        margin-top: -30px !important;
-    }
-
-    & > * {
-        align-items: center;
-        background-color: white;
-        display: flex;
-        flex-flow: column;
-        vertical-align: middle;
-        max-width: map-get($breakpoints, large);
-        flex: 1 0 auto;
-
-        &:not(:last-child) {
-            margin-bottom: $margin-large;
-        }
-
-        & > h1 {
-            background-color: $light1;
-            padding: $padding-large;
-            z-index: 999;
-        }
-    }
 }
 </style>

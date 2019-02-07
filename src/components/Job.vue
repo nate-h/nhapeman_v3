@@ -34,8 +34,6 @@ export default {
 $img-side: 200px;
 
 .job-container {
-    @extend %container;
-
     .leftside {
         flex-grow: 0;
         flex-shrink: 0;
