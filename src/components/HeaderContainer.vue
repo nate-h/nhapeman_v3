@@ -32,7 +32,6 @@ export default {
     }
 
     & > .body {
-        @extend %l-to-r;
         width: 100%;
     }
 

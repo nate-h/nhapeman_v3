@@ -3,10 +3,8 @@
 
         <about-me-container></about-me-container>
 
-        <div>
+        <header-container header="Job History" class=job-components>
             <!-- Inject Job Components -->
-            <h1 id="jobhistory">Job History</h1>
-
             <job-container
               company='Applied Invention'
               :img="require('img/ai.png')"
@@ -24,7 +22,7 @@
               short-description='Software Engineer'>
                 I worked part-time at FrackOptima as a software engineer while working full-time for Applied Invention. FrackOptima is a hydraulic fracturing company that specializes in software and services for optimal hydraulic fracturing treatments. There's several systems which make this all possible. Most of my work has been on the company website and the fracking simulator.
             </job-container>
-        </div>
+        </header-container>
 
     </div>
 </template>
@@ -60,5 +58,9 @@ export default {
 .home {
     padding: $padding-large;
     @extend %t-to-b, .ca;
+
+    & > *:not(:last-child) {
+        margin-bottom: $margin-large;
+    }
 }
 </style>
