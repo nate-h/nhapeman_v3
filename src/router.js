@@ -4,6 +4,8 @@ import Home from "./views/Home.vue";
 import Resume from "./views/Resume.vue";
 import Projects from "./views/Projects.vue";
 
+import ProjectMario from "./views/ProjectMario.vue";
+
 Vue.use(Router);
 
 export default new Router({
@@ -22,12 +24,12 @@ export default new Router({
             path: "/projects",
             name: "Projects",
             component: Projects,
-            has_dropdown: true,
             children: [
-                // {
-                //   path: 'profile',
-                //   component: UserProfile
-                // }
+                {
+                    path: "mario",
+                    name: "Mario",
+                    component: ProjectMario
+                }
             ]
         }
     ]

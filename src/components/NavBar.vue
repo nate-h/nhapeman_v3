@@ -15,7 +15,7 @@
     <div class="link-holder l-to-r">
       <div v-for="link in routes" :key="link.name">
         <!-- Routes with dropsdown -->
-        <div class="dropdown" v-if="link.has_dropdown">
+        <div class="dropdown" v-if="hasChildren(link)">
           <div class="label">
             <router-link class="router-link" :to="link.path">
               <span>{{link.name}}</span>
@@ -23,16 +23,17 @@
             </router-link>
           </div>
 
+          <!-- Drop down list of children. -->
           <div class="list">
-            <router-link class="router-link" v-for="sub_link in ['/home', '/resume']"
-                         :to="sub_link" :key="sub_link">
-              <span>{{sub_link}}</span>
+            <router-link class="router-link" v-for="child in link['children']"
+                         :to="link.path + '/' + child.path" :key="child.name">
+              <span>{{child.name}}</span>
             </router-link>
           </div>
         </div>
 
         <!-- Routes without dropsdown -->
-        <router-link class="router-link" :to="link.path" v-if="!link.has_dropdown">
+        <router-link class="router-link" :to="link.path" v-if="!hasChildren(link)">
           <span>{{link.name}}</span>
         </router-link>
       </div>
@@ -61,14 +62,13 @@ export default {
     },
     props: [],
     methods: {
-        linkClick(link) {
-            console.log("link", link);
+        hasChildren(link) {
+            return "children" in link && link["children"].length > 0;
         }
     },
     watch: {},
     created() {
         this.routes = this.$router.options.routes;
-        console.log("this.routes", this.routes);
     },
     components: {
         arrowSvg
