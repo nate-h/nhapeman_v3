@@ -37,15 +37,6 @@
           <span>{{link.name}}</span>
         </router-link>
       </div>
-
-      <!-- Iterate on child paths -->
-      <!-- <div v-for="childLink in link.children" :key="childLink.name">
-            <router-link :to="link.path + '/' + childLink.path">
-                <button class="link-buttons">
-                    <span>{{childLink.name}}</span>
-                </button>
-            </router-link>
-      </div>-->
     </div>
   </header>
 </template>

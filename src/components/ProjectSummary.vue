@@ -1,14 +1,16 @@
 <template>
   <div class="project-summary l-to-r lt">
+    <!-- Left -->
     <div class="leftside">
       <img :src="img">
     </div>
-    <div class="rightside">
-      <h2>
-        <small class="date right">{{button_text}}</small>
-      </h2>
 
-      <h1>{{name}}</h1>
+    <!-- Right -->
+    <div class="rightside">
+      <div class="header">
+        <h1 class="name">{{name}}</h1>
+        <router-link :to="link" class="link">{{button_text}}</router-link>
+      </div>
       <p>
         <slot></slot>
       </p>
@@ -18,7 +20,7 @@
 
 <script>
 export default {
-    props: ["name", "button_text", "img"]
+    props: ["name", "button_text", "img", "link"]
 };
 </script>
 
@@ -27,7 +29,6 @@ $img-side: 200px;
 
 .project-summary {
     background-color: $light1;
-    //margin: $margin-small 0;
     max-width: map-get($breakpoints, large);
     padding: $padding-large;
     width: 100%;
@@ -42,9 +43,16 @@ $img-side: 200px;
     .rightside {
         flex-grow: 1;
 
-        .date {
-            margin-left: $margin-large;
-            color: $dark3;
+        .header {
+            @extend %l-to-r, .ca;
+            margin-bottom: $margin-small;
+        }
+        .name {
+            display: inline-block;
+        }
+        .link {
+            margin-left: auto;
+            @extend %router-link;
         }
     }
 
