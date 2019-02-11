@@ -19,8 +19,7 @@ export default {
     name: "Projects",
     components: {
         "project-mario": ProjectMario
-    },
-    created: function() {}
+    }
 };
 </script>
 

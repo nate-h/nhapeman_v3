@@ -1,9 +1,9 @@
 <template>
-  <header-container header="Mario">
-      <div v-if="$route.name !== 'Mario'">
+  <header-container header="MyTunes">
+      <div v-if="$route.name !== 'MyTunes'">
           Brief description
       </div>
-      <div v-if="$route.name === 'Mario'">
+      <div v-if="$route.name === 'MyTunes'">
           Long description
       </div>
   </header-container>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-    name: "ProjectMario",
+    name: "ProjectMyTunes",
     data() {
         return {};
     },
