@@ -1,13 +1,12 @@
 <template>
   <div class="projects">
-    <div v-if="$route.name === 'Projects'">
+    <div v-if="$route.name === 'Projects'" class="list">
       <header-container header="Projects">
         <p>Here are some of my projects I've developed outside of work. I would love to show some of the stuff I've worked on at some of my jobs but am unable to.</p>
       </header-container>
 
       <project-mario></project-mario>
     </div>
-
 
     <router-view></router-view>
   </div>
@@ -27,5 +26,9 @@ export default {
 .projects {
     padding: $padding-large;
     @extend %t-to-b, .ca;
+
+    .list > *:not(:last-child) {
+        margin-bottom: $margin-large;
+    }
 }
 </style>

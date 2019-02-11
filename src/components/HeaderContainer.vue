@@ -16,7 +16,7 @@ export default {
 <style lang="scss">
 .header-container {
     align-items: center;
-    background-color: white;
+    background-color: $light1;
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
