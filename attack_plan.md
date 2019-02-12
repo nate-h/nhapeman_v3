@@ -16,6 +16,4 @@
 Take previous home, resume, projects.
 
 # TODO
-* rewrite job
-* add to project
-* create dropdown menu
+  * finalize project summary and demo
