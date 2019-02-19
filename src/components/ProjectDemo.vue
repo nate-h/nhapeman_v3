@@ -1,33 +1,32 @@
 <template>
-  <div class="project-summary l-to-r lt">
-    <!-- Left -->
-    <div class="leftside">
-      <img :src="img">
-    </div>
+    <div class="project-demo l-to-r lt">
+        <!-- Left -->
+        <div class="leftside">
+            <slot name="demo"></slot>
+        </div>
 
-    <!-- Right -->
-    <div class="rightside">
-      <div class="header">
-        <h1 class="name">{{name}}</h1>
-        <router-link :to="link" class="link">{{button_text}}</router-link>
-      </div>
-      <p>
-        <slot></slot>
-      </p>
+        <!-- Right -->
+        <div class="rightside">
+            <div class="header">
+                <h1 class="name">{{ name }}</h1>
+            </div>
+
+            <slot name="text"></slot>
+            <slot></slot>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
 export default {
-    props: ["name", "button_text", "img", "link"]
+    props: ["name", "img"]
 };
 </script>
 
 <style lang="scss">
 $img-side: 200px;
 
-.project-summary {
+.project-demo {
     background-color: $light1;
     max-width: map-get($breakpoints, large);
     padding: $padding-large;
@@ -49,10 +48,6 @@ $img-side: 200px;
         }
         .name {
             display: inline-block;
-        }
-        .link {
-            margin-left: auto;
-            @extend %router-link;
         }
     }
 

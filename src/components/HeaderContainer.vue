@@ -1,10 +1,10 @@
 <template>
-  <div class="header-container">
-    <h1 class="header">{{header}}</h1>
-    <div class=body>
-        <slot></slot>
+    <div class="header-container">
+        <h1 class="header">{{ header }}</h1>
+        <div class="body">
+            <slot></slot>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>

@@ -1,25 +1,25 @@
 <template>
-  <footer class="my-footer">
-
-      <div class="contact">
-            <a href="mailto:nhapeman@gmail.com?Subject=Hey%20Nate" target="_top">
+    <footer class="my-footer">
+        <div class="contact">
+            <a
+                href="mailto:nhapeman@gmail.com?Subject=Hey%20Nate"
+                target="_top"
+            >
                 <h1>Contact Info</h1>
                 <h2>nhapeman@gmail.com</h2>
             </a>
-      </div>
+        </div>
 
-      <div class="social-links">
-          <svg-link link="https://www.linkedin.com/in/nhapeman/">
-            <linkedin-svg/>
-          </svg-link>
-          <svg-link link="https://github.com/nate-h">
-            <github-svg/>
-          </svg-link>
-      </div>
-
-  </footer>
+        <div class="social-links">
+            <svg-link link="https://www.linkedin.com/in/nhapeman/">
+                <linkedin-svg />
+            </svg-link>
+            <svg-link link="https://github.com/nate-h">
+                <github-svg />
+            </svg-link>
+        </div>
+    </footer>
 </template>
-
 
 <script>
 import linkedinSvg from "img/linkedin.svg";

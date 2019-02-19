@@ -1,10 +1,11 @@
 <template>
-  <div class="resume">
-    <embed class="pdf"
-        :src="require('resume/Nathanial.Hapeman.Resume.pdf')"
-        type='application/pdf'
-    >
-  </div>
+    <div class="resume">
+        <embed
+            class="pdf"
+            :src="require('resume/Nathanial.Hapeman.Resume.pdf')"
+            type="application/pdf"
+        />
+    </div>
 </template>
 
 <script>

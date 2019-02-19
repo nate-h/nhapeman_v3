@@ -1,9 +1,8 @@
 <template>
     <a :href="link" class="svg-link">
         <slot></slot>
-        <p class="svg-label">{{label}}</p>
+        <p class="svg-label">{{ label }}</p>
     </a>
-
 </template>
 
 <script>

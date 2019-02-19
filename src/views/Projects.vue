@@ -1,15 +1,18 @@
 <template>
-  <div class="projects">
-    <div v-if="$route.name === 'Projects'" class="list">
-      <header-container header="Projects">
-        <p>Here are some of my projects I've developed outside of work. I would love to show some of the stuff I've worked on at some of my jobs but am unable to.</p>
-      </header-container>
+    <div class="projects">
+        <div v-if="$route.name === 'Projects'" class="list">
+            <header-container header="Projects">
+                <p>
+                    Here are some of the fun coding projects I've created
+                    outside of work. Enjoy!
+                </p>
+            </header-container>
 
-      <project-mario></project-mario>
+            <project-mario></project-mario>
+        </div>
+
+        <router-view></router-view>
     </div>
-
-    <router-view></router-view>
-  </div>
 </template>
 
 <script>

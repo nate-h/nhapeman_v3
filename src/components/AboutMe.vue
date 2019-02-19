@@ -1,40 +1,43 @@
 <template>
-  <header-container header="About Me">
-    <div class="about-me-container l-to-r equal lt">
-      <div class="row">
-        <h2>About Me</h2>
-        <p>
-          Hi! I'm Nathanial Hapeman and I am a professional software engineer.
-          Going on 5 years of working in the industry
-          and have worked in many different domains including:
-          machine learning, fullstack development, simulation and game development.
-          The computer languages I have the most experience with are c/c++, python and javascript
-          but have coded for fun and professionaly in many more.
-          Outside of my professional career, I enjoy hiking, table tennis, netflexing,
-          and having a good time with friends.
-          Always interested in meeting new people and learning something new
-          so send me an email if you want to get in touch.
-        </p>
-      </div>
-      <div class="row">
-        <img src="~img/stitchedme.jpg" alt>
-      </div>
-      <div class="row">
-        <h2>Details</h2>
-        <ul>
-          <li class="question">Name:</li>
-          <li class="answer">Nathanial Hapeman</li>
-          <li class="question">Age:</li>
-          <li class="answer">{{my_rough_age()}}</li>
-          <li class="question">Location:</li>
-          <li class="answer">Los Angeles, CA</li>
-          <li class="question">Education:</li>
-          <li class="answer">UC Riverside</li>
-          <li class="answer">BS in Mechanical Engineering, minor in Computer Science</li>
-        </ul>
-      </div>
-    </div>
-  </header-container>
+    <header-container header="About Me">
+        <div class="about-me-container l-to-r equal lt">
+            <div class="row">
+                <h2>About Me</h2>
+                <p>
+                    Hi! I'm Nathanial Hapeman and I am a professional software
+                    engineer. Going on 5 years of working in the industry and
+                    have worked in many different domains including: machine
+                    learning, fullstack development, simulation and game
+                    development. The computer languages I have the most
+                    experience with are c/c++, python and javascript but have
+                    coded for fun and professionaly in many more. Outside of my
+                    professional career, I enjoy hiking, table tennis,
+                    netflexing, and having a good time with friends. Always
+                    interested in meeting new people and learning something new
+                    so send me an email if you want to get in touch.
+                </p>
+            </div>
+            <div class="row">
+                <img src="~img/stitchedme.jpg" alt />
+            </div>
+            <div class="row">
+                <h2>Details</h2>
+                <ul>
+                    <li class="question">Name:</li>
+                    <li class="answer">Nathanial Hapeman</li>
+                    <li class="question">Age:</li>
+                    <li class="answer">{{ my_rough_age() }}</li>
+                    <li class="question">Location:</li>
+                    <li class="answer">Los Angeles, CA</li>
+                    <li class="question">Education:</li>
+                    <li class="answer">UC Riverside</li>
+                    <li class="answer">
+                        BS in Mechanical Engineering, minor in Computer Science
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header-container>
 </template>
 
 <script>

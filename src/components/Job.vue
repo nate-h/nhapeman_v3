@@ -1,22 +1,21 @@
 <template>
-  <div class="job-container l-to-r lt">
-      <!-- Content inserted here! -->
-      <div class="leftside">
-        <img :src="img">
-      </div>
-      <div class="rightside">
-
+    <div class="job-container l-to-r lt">
+        <!-- Content inserted here! -->
+        <div class="leftside">
+            <img :src="img" />
+        </div>
+        <div class="rightside">
             <h2>
-                <a :href="link">{{company}}</a>
-                <small class="date right">{{years}}</small>
+                <a :href="link">{{ company }}</a>
+                <small class="date right">{{ years }}</small>
             </h2>
 
-          <h3>{{shortDescription}}</h3>
-          <p>
-            <slot></slot>
-          </p>
-      </div>
-  </div>
+            <h3>{{ shortDescription }}</h3>
+            <p>
+                <slot></slot>
+            </p>
+        </div>
+    </div>
 </template>
 
 <script>

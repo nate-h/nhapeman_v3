@@ -1,46 +1,53 @@
 <template>
-  <header class="nav-bar l-to-r">
-    <!-- Logo -->
-    <div class="logo-blob">
-      <img src="~img/logo.png" class="logo">
-      <div class="me t-to-b lt">
-        <router-link to="/">
-          <h1>Nathanial Hapeman</h1>
-          <h2>Software Engineer</h2>
-        </router-link>
-      </div>
-    </div>
-
-    <!-- Links -->
-    <div class="link-holder l-to-r">
-      <div v-for="link in routes" :key="link.name">
-        <!-- Routes with dropsdown -->
-        <div class="dropdown" v-if="hasChildren(link)">
-          <div class="label">
-            <router-link class="router-link" :to="link.path">
-              <span>{{link.name}}</span>
-              <arrow-svg/>
-            </router-link>
-          </div>
-
-          <!-- Drop down list of children. -->
-          <div class="list">
-            <router-link class="router-link" v-for="child in link['children']"
-                         :to="link.path + '/' + child.path" :key="child.name">
-              <span>{{child.name}}</span>
-            </router-link>
-          </div>
+    <header class="nav-bar l-to-r">
+        <!-- Logo -->
+        <div class="logo-blob">
+            <img src="~img/logo.png" class="logo" />
+            <div class="me t-to-b lt">
+                <router-link to="/">
+                    <h1>Nathanial Hapeman</h1>
+                    <h2>Software Engineer</h2>
+                </router-link>
+            </div>
         </div>
 
-        <!-- Routes without dropsdown -->
-        <router-link class="router-link" :to="link.path" v-if="!hasChildren(link)">
-          <span>{{link.name}}</span>
-        </router-link>
-      </div>
-    </div>
-  </header>
-</template>
+        <!-- Links -->
+        <div class="link-holder l-to-r">
+            <div v-for="link in routes" :key="link.name">
+                <!-- Routes with dropsdown -->
+                <div class="dropdown" v-if="hasChildren(link)">
+                    <div class="label">
+                        <router-link class="router-link" :to="link.path">
+                            <span>{{ link.name }}</span>
+                            <arrow-svg />
+                        </router-link>
+                    </div>
 
+                    <!-- Drop down list of children. -->
+                    <div class="list">
+                        <router-link
+                            class="router-link"
+                            v-for="child in link['children']"
+                            :to="link.path + '/' + child.path"
+                            :key="child.name"
+                        >
+                            <span>{{ child.name }}</span>
+                        </router-link>
+                    </div>
+                </div>
+
+                <!-- Routes without dropsdown -->
+                <router-link
+                    class="router-link"
+                    :to="link.path"
+                    v-if="!hasChildren(link)"
+                >
+                    <span>{{ link.name }}</span>
+                </router-link>
+            </div>
+        </div>
+    </header>
+</template>
 
 <script>
 import arrowSvg from "img/arrow.svg";

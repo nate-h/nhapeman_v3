@@ -1,21 +1,23 @@
 <template>
-  <div class="project-summary l-to-r lt">
-    <!-- Left -->
-    <div class="leftside">
-      <img :src="img">
-    </div>
+    <div class="project-summary l-to-r lt">
+        <!-- Left -->
+        <div class="leftside">
+            <img :src="img" />
+        </div>
 
-    <!-- Right -->
-    <div class="rightside">
-      <div class="header">
-        <h1 class="name">{{name}}</h1>
-        <router-link :to="link" class="link">{{button_text}}</router-link>
-      </div>
-      <p>
-        <slot></slot>
-      </p>
+        <!-- Right -->
+        <div class="rightside">
+            <div class="header">
+                <h1 class="name">{{ name }}</h1>
+                <router-link :to="link" class="link">{{
+                    button_text
+                }}</router-link>
+            </div>
+            <p>
+                <slot></slot>
+            </p>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
