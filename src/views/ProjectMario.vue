@@ -1,11 +1,11 @@
 <template>
     <div>
         <project-summary
-            v-if="$route.name !== 'Mario'"
+            v-if="$route.name !== name"
             :img="require('img/mario.png')"
-            button_text="View Gameplay"
-            link="/projects/mario"
-            name="Mario"
+            button-text="View Gameplay"
+            :link="link"
+            :name="name"
         >
             <p>
                 I worked part-time at FrackOptima as a software engineer while
@@ -17,18 +17,13 @@
             </p>
         </project-summary>
 
-        <project-demo
-            v-if="$route.name === 'Mario'"
-            button_text="View Gameplay"
-            link="/projects/mario"
-            name="Mario"
-        >
+        <project-demo v-if="$route.name === name" :name="name">
             <template v-slot:demo>
                 <img src="~img/mario.png" />
             </template>
-            <template v-slot:text
-                >test2</template
-            >
+            <template v-slot:text>
+                <span>test2</span>
+            </template>
         </project-demo>
     </div>
 </template>
@@ -37,7 +32,10 @@
 export default {
     name: "ProjectMario",
     data() {
-        return {};
+        return {
+            name: "Mario",
+            link: "mario"
+        };
     },
     methods: {}
 };
