@@ -24,7 +24,15 @@
 
         <project-demo v-if="$route.name === name" :name="name">
             <template v-slot:demo>
-                <img src="~img/mario.png" />
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/EMslyjWIPGo"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                ></iframe>
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/1c4erMvMnVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
             </template>
             <template v-slot:text>
                 <span>test2</span>
