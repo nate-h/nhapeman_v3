@@ -9,6 +9,7 @@
             </header-container>
 
             <project-mario></project-mario>
+            <project-my-tunes></project-my-tunes>
         </div>
 
         <router-view></router-view>
@@ -17,10 +18,12 @@
 
 <script>
 import ProjectMario from "@/views/ProjectMario.vue";
+import ProjectMyTunes from "@/views/ProjectMyTunes.vue";
 export default {
     name: "Projects",
     components: {
-        "project-mario": ProjectMario
+        "project-mario": ProjectMario,
+        "project-my-tunes": ProjectMyTunes
     }
 };
 </script>
