@@ -24,18 +24,25 @@
 
         <project-demo v-if="$route.name === name" :name="name">
             <template v-slot:demo>
-                <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/EMslyjWIPGo"
-                    frameborder="0"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                ></iframe>
+                <div style="position:relative;padding-top:56.25%;">
+                    <iframe
+                        src="https://www.youtube.com/embed/EMslyjWIPGo"
+                        frameborder="0"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                    ></iframe>
+                </div>
                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/1c4erMvMnVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
             </template>
             <template v-slot:text>
-                <span>test2</span>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Alias aut consectetur quia, recusandae quod, debitis
+                    reprehenderit dolorum dolores inventore iusto ad blanditiis
+                    dolorem, quo aliquid sit veniam? Praesentium, facere
+                    voluptatem.
+                </p>
             </template>
         </project-demo>
     </div>
