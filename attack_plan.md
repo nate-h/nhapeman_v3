@@ -16,4 +16,13 @@
 Take previous home, resume, projects.
 
 # TODO
-  * finalize project summary and demo
+  * add projects:
+    - mytunes
+    - mario
+    - this website
+    - dfs drawer
+    - minesweeper
+    - pacman
+    - letter recog
+    - multi shooter
+    - phong shader
