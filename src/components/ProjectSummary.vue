@@ -3,7 +3,7 @@
         <!-- Left -->
         <div class="leftside">
             <router-link :to="'/projects/' + link" class="link" v-if="link">
-                <img :src="img" />
+                <img :src="img" class="thumbnail" />
             </router-link>
             <img :src="img" v-if="!link" />
         </div>
@@ -39,6 +39,7 @@ $img-side: 200px;
     width: 100%;
 
     .leftside {
+        @extend %l-to-r, .ca;
         flex-grow: 0;
         flex-shrink: 0;
         margin-right: $padding-large;
@@ -61,8 +62,7 @@ $img-side: 200px;
         }
     }
 
-    img:first-of-type {
-        height: 200px;
+    .thumbnail {
         width: 200px;
     }
 }

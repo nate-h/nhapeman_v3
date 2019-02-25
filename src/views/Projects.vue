@@ -3,8 +3,8 @@
         <div v-if="$route.name === 'Projects'" class="list">
             <header-container header="Projects">
                 <p>
-                    Here are some of the fun coding projects I've created
-                    outside of work. Enjoy!
+                    Here are some of the fun coding projects I created outside
+                    of work. Enjoy!
                 </p>
             </header-container>
 
