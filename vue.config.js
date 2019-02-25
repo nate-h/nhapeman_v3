@@ -15,7 +15,7 @@ module.exports = {
         resolve: {
             alias: {
                 img: path.resolve(__dirname, "src/assets/images"),
-                resume: path.resolve(__dirname, "resume")
+                subs: path.resolve(__dirname, "submodules")
             }
         },
         module: {

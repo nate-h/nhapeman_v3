@@ -2,7 +2,7 @@
     <div class="resume">
         <embed
             class="pdf"
-            :src="require('resume/Nathanial.Hapeman.Resume.pdf')"
+            :src="require('subs/resume/Nathanial.Hapeman.Resume.pdf')"
             type="application/pdf"
         />
     </div>
