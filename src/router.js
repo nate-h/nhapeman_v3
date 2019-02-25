@@ -6,6 +6,7 @@ import Projects from "./views/Projects.vue";
 
 import ProjectMario from "./views/ProjectMario.vue";
 import ProjectMyTunes from "./views/ProjectMyTunes.vue";
+import ProjectVue from "./views/ProjectVue.vue";
 
 Vue.use(Router);
 
@@ -35,6 +36,11 @@ export default new Router({
                     path: "mytunes",
                     name: "MyTunes",
                     component: ProjectMyTunes
+                },
+                {
+                    path: "vue",
+                    name: "Vue",
+                    component: ProjectVue
                 }
             ]
         }

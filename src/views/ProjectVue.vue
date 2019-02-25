@@ -2,12 +2,12 @@
     <div>
         <project-summary
             v-if="$route.name !== name"
-            button-text="View Demo"
+            button-text="My Experience"
             :link="link"
             :name="name"
         >
             <template v-slot:img>
-                <img src="~img/recordName.png" />
+                <vuelogo></vuelogo>
             </template>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
@@ -43,15 +43,19 @@
 </template>
 
 <script>
+import vuelogo from "img/vuelogo.svg";
 export default {
-    name: "ProjectMyTunes",
+    name: "ProjectVue",
     data() {
         return {
-            name: "MyTunes",
-            link: "mytunes"
+            name: "Vue",
+            link: "vue"
         };
     },
-    methods: {}
+    methods: {},
+    components: {
+        vuelogo
+    }
 };
 </script>
 

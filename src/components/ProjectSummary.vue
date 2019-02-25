@@ -3,9 +3,9 @@
         <!-- Left -->
         <div class="leftside">
             <router-link :to="'/projects/' + link" class="link" v-if="link">
-                <img :src="img" class="thumbnail" />
+                <slot name="img" class="thumbnail"></slot>
             </router-link>
-            <img :src="img" v-if="!link" />
+            <slot name="img" class="thumbnail" v-if="!link"></slot>
         </div>
 
         <!-- Right -->
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-    props: ["name", "buttonText", "img", "link"]
+    props: ["name", "buttonText", "link"]
 };
 </script>
 

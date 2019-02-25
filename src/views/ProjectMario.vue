@@ -2,11 +2,13 @@
     <div>
         <project-summary
             v-if="$route.name !== name"
-            :img="require('img/mario.png')"
             button-text="View Gameplay"
             :link="link"
             :name="name"
         >
+            <template v-slot:img>
+                <img src="~img/mario.png" />
+            </template>
             <p>
                 Being a 90's kid, I played my fair share of Mario based games.
                 The next logical step was to create my own version of my beloved
