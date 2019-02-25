@@ -44,6 +44,14 @@ $img-side: 200px;
         flex-shrink: 0;
         margin-right: $padding-large;
         width: $img-side;
+
+        img {
+            width: $img-side;
+        }
+
+        svg {
+            width: $img-side;
+        }
     }
 
     .rightside {
@@ -60,10 +68,6 @@ $img-side: 200px;
             margin-left: auto;
             @extend %router-link;
         }
-    }
-
-    .thumbnail {
-        width: 200px;
     }
 }
 </style>

@@ -2,7 +2,7 @@
     <div>
         <project-summary
             v-if="$route.name !== name"
-            button-text="My Experience"
+            button-text="View Experience"
             :link="link"
             :name="name"
         >
