@@ -11,6 +11,7 @@
             <project-mario></project-mario>
             <project-my-tunes></project-my-tunes>
             <project-vue></project-vue>
+            <project-pacman></project-pacman>
         </div>
 
         <router-view></router-view>
@@ -21,12 +22,14 @@
 import ProjectMario from "@/views/ProjectMario.vue";
 import ProjectMyTunes from "@/views/ProjectMyTunes.vue";
 import ProjectVue from "@/views/ProjectVue.vue";
+import ProjectPacman from "@/views/ProjectPacman.vue";
 export default {
     name: "Projects",
     components: {
         "project-mario": ProjectMario,
         "project-my-tunes": ProjectMyTunes,
-        "project-vue": ProjectVue
+        "project-vue": ProjectVue,
+        "project-pacman": ProjectPacman
     }
 };
 </script>
