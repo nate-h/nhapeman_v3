@@ -19,7 +19,14 @@
 
         <project-demo v-if="$route.name === name" :name="name">
             <template v-slot:demo>
-                <span>testing</span>
+                test
+                <iframe
+                    src="https://nate-h.github.io/pacman_js/"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                    style="width:100%;height:100%;"
+                ></iframe>
             </template>
             <template v-slot:text>
                 <p>
