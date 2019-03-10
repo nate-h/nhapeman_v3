@@ -35,7 +35,6 @@
                         style="position:absolute;top:0;left:0;width:100%;height:100%;"
                     ></iframe>
                 </div>
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/1c4erMvMnVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
             </template>
             <template v-slot:text>
                 <p>
