@@ -9,6 +9,7 @@
             </header-container>
 
             <project-mario></project-mario>
+            <project-minesweeper></project-minesweeper>
             <project-my-tunes></project-my-tunes>
             <project-vue></project-vue>
             <project-pacman></project-pacman>
@@ -20,6 +21,7 @@
 
 <script>
 import ProjectMario from "@/views/ProjectMario.vue";
+import ProjectMinesweeper from "@/views/ProjectMinesweeper.vue";
 import ProjectMyTunes from "@/views/ProjectMyTunes.vue";
 import ProjectVue from "@/views/ProjectVue.vue";
 import ProjectPacman from "@/views/ProjectPacman.vue";
@@ -27,6 +29,7 @@ export default {
     name: "Projects",
     components: {
         "project-mario": ProjectMario,
+        "project-minesweeper": ProjectMinesweeper,
         "project-my-tunes": ProjectMyTunes,
         "project-vue": ProjectVue,
         "project-pacman": ProjectPacman
