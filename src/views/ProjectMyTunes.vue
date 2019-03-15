@@ -5,10 +5,14 @@
                 <img src="~img/recordName.png" />
             </template>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                aut consectetur quia, recusandae quod, debitis reprehenderit
-                dolorum dolores inventore iusto ad blanditiis dolorem, quo
-                aliquid sit veniam? Praesentium, facere voluptatem.
+                Before I got into streaming, I had a pretty big music
+                collection. I was really into making playlist but was frustrated
+                at how iTunes didn't have the best UI for managing playlists.
+                Trying to improve my coding skills, I thought it would be fun to
+                create my own version of iTunes with some cool features for
+                managing playlists. So I created MyTunes. In creating it, I
+                learned a good amount about multithread synchronization, object
+                serialization, regex filters, swing components
             </p>
         </project-summary>
 
