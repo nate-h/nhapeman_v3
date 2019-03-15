@@ -1,10 +1,10 @@
 <template>
     <div>
         <project-summary
-            v-if="$route.name !== name"
-            button-text="View Experience"
-            :link="link"
-            :name="name"
+            v-if="showSummary()"
+            :title="title"
+            :path="path"
+            button-text="My Experience"
         >
             <template v-slot:img>
                 <vuelogo></vuelogo>
@@ -17,7 +17,7 @@
             </p>
         </project-summary>
 
-        <project-demo v-if="$route.name === name" :name="name">
+        <project-demo v-if="showDemo()" :title="title">
             <template v-slot:demo>
                 <div style="position:relative;padding-top:56.25%;">
                     <iframe

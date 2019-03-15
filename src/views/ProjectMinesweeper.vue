@@ -2,9 +2,9 @@
     <div>
         <project-summary
             v-if="showSummary()"
-            button-text="Play It"
-            :link="path"
-            :name="name"
+            :title="title"
+            :path="path"
+            button-text="Play"
         >
             <template v-slot:img>
                 <img src="~img/minesweeper.png" />
@@ -17,7 +17,7 @@
             </p>
         </project-summary>
 
-        <project-demo v-if="showDemo()">
+        <project-demo v-if="showDemo()" :title="title">
             <template v-slot:demo>
                 <iframe
                     src="https://nate-h.github.io/minesweeper_js/"

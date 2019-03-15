@@ -2,9 +2,9 @@
     <div>
         <project-summary
             v-if="showSummary()"
-            button-text="View Gameplay"
-            :link="path"
-            :name="name"
+            :title="title"
+            :path="path"
+            button-text="Demo"
         >
             <template v-slot:img>
                 <img src="~img/mario.png" />
@@ -24,7 +24,7 @@
             </p>
         </project-summary>
 
-        <project-demo v-if="showDemo()">
+        <project-demo v-if="showDemo()" :title="title">
             <template v-slot:demo>
                 <div style="position:relative;padding-top:56.25%;">
                     <iframe

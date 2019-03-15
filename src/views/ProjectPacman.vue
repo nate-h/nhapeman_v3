@@ -1,10 +1,10 @@
 <template>
     <div>
         <project-summary
-            v-if="$route.name !== name"
-            button-text="Play It"
-            :link="link"
-            :name="name"
+            v-if="showSummary()"
+            :title="title"
+            :path="path"
+            button-text="Play"
         >
             <template v-slot:img>
                 <img src="~img/pacman.png" />
@@ -17,7 +17,7 @@
             </p>
         </project-summary>
 
-        <project-demo v-if="$route.name === name" :name="name">
+        <project-demo v-if="showDemo()" :title="title">
             <template v-slot:demo>
                 <iframe
                     src="https://nate-h.github.io/pacman_js/"

@@ -2,7 +2,7 @@
     <div class="project-demo t-to-b">
         <!-- Header -->
         <div class="header">
-            <h1 class="name">{{ name }}</h1>
+            <h1 class="title">{{ title }}</h1>
         </div>
 
         <!-- Demo -->
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-    props: ["name", "img"]
+    props: ["title", "img"]
 };
 </script>
 

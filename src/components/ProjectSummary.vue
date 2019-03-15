@@ -2,17 +2,17 @@
     <div class="project-summary l-to-r lt">
         <!-- Left -->
         <div class="leftside">
-            <router-link :to="'/projects/' + link" class="link" v-if="link">
+            <router-link :to="'/projects/' + path" class="link" v-if="path">
                 <slot name="img" class="thumbnail"></slot>
             </router-link>
-            <slot name="img" class="thumbnail" v-if="!link"></slot>
+            <slot name="img" class="thumbnail" v-if="!path"></slot>
         </div>
 
         <!-- Right -->
         <div class="rightside">
             <div class="header">
-                <h1 class="name">{{ name }}</h1>
-                <router-link :to="'/projects/' + link" class="link">
+                <h1 class="title">{{ title }}</h1>
+                <router-link :to="'/projects/' + path" class="link">
                     <span>{{ buttonText }}</span>
                 </router-link>
             </div>
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-    props: ["name", "buttonText", "link"]
+    props: ["title", "buttonText", "path"]
 };
 </script>
 
@@ -60,13 +60,14 @@ $img-side: 200px;
         .header {
             @extend %l-to-r, .ca;
             margin-bottom: $margin-small;
-        }
-        .name {
-            display: inline-block;
-        }
-        .link {
-            margin-left: auto;
-            @extend %router-link;
+
+            .title {
+                display: inline-block;
+            }
+            .link {
+                margin-left: auto;
+                @extend %router-link;
+            }
         }
     }
 }
