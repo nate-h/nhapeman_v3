@@ -46,9 +46,9 @@ export default {
     mixins: [ProjectBase],
     data() {
         return {
-            title: "Vue title",
+            title: "Learning Vue",
             description: "Vue, Sass",
-            buttonText: "Experience"
+            buttonText: "My Experience"
         };
     },
     components: {

@@ -45,8 +45,8 @@ export default {
     mixins: [ProjectBase],
     data() {
         return {
-            title: "MyTunes a music player",
-            description: "Java",
+            title: "MyTunes, a music player",
+            description: "Java and JavaZOOM",
             buttonText: "Demo"
         };
     }

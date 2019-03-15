@@ -44,8 +44,8 @@ export default {
     mixins: [ProjectBase],
     data() {
         return {
-            title: "Pacman",
-            description: "Pure javascript",
+            title: "Pacman Remake",
+            description: "Javascript",
             buttonText: "Play"
         };
     }

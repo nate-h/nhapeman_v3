@@ -44,8 +44,8 @@ export default {
     mixins: [ProjectBase],
     data() {
         return {
-            title: "Minesweeper implemented in JS",
-            description: "Pure javascript",
+            title: "Minesweeper Remake",
+            description: "Javascript",
             buttonText: "Play"
         };
     }

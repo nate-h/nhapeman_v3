@@ -3,6 +3,7 @@
         <!-- Header -->
         <div class="header">
             <h1 class="title">{{ title }}</h1>
+            <span class="description">{{ description }}</span>
         </div>
 
         <!-- Demo -->
@@ -21,9 +22,9 @@
 export default {
     data() {
         return {
-            'title': this.$parent.title,
-            'description': this.$parent.description,
-        }
+            title: this.$parent.title,
+            description: this.$parent.description
+        };
     }
 };
 </script>
@@ -37,6 +38,13 @@ export default {
 
     .header {
         margin-bottom: $margin-large;
+    }
+
+    .description {
+        @extend %default-size;
+        color: $dark3;
+        font-weight: bold;
+        margin-left: $margin;
     }
 
     .demo {

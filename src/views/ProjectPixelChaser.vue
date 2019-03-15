@@ -45,7 +45,7 @@ export default {
     data() {
         return {
             title: "Pixel Chaser",
-            description: "Pure javascript",
+            description: "Javascript",
             buttonText: "Demo"
         };
     }

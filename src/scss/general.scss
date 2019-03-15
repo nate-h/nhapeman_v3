@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5 {
 }
 
 p, ul, ol, li, td, input, button, label {
-    font-size: 1.6rem;
+    @extend %default-size;
 }
 
 /////////////////////////////////////////////////////////////////////

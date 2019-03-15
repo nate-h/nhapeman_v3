@@ -12,7 +12,7 @@
         <div class="rightside">
             <div class="header">
                 <h1 class="title">{{ title }}</h1>
-                <p class="description">{{ description }}</p>
+                <span class="description">{{ description }}</span>
                 <router-link :to="'/projects/' + path" class="link">
                     <span>{{ buttonText }}</span>
                 </router-link>
@@ -26,7 +26,14 @@
 
 <script>
 export default {
-    props: ["title", "buttonText", "path", "description"]
+    data() {
+        return {
+            title: this.$parent.title,
+            buttonText: this.$parent.buttonText,
+            description: this.$parent.description,
+            path: this.$parent.path
+        };
+    }
 };
 </script>
 
@@ -65,9 +72,10 @@ $img-side: 200px;
             .title {
                 display: inline-block;
             }
+
             .description {
-                color: #999;
-                display: inline-block;
+                @extend %default-size;
+                color: $dark3;
                 font-weight: bold;
                 margin-left: $margin;
             }

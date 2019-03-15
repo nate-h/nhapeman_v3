@@ -19,14 +19,11 @@ export default {
         }
     },
     created: function() {
-        if (this.name === null) {
-            console.error("Need to override name");
-        }
-        if (this.path === null) {
-            console.error("Need to override path");
-        }
-        if (this.title === null) {
-            console.error("Need to override title");
+        let neededOverrides = ["name", "path", "title", "description"];
+        for (let prop of neededOverrides) {
+            if (this[prop] === null || this[prop] === undefined) {
+                console.error(`Need to override ${prop}`);
+            }
         }
     }
 };
