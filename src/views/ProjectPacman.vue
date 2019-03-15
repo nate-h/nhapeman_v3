@@ -1,11 +1,6 @@
 <template>
     <div>
-        <project-summary
-            v-if="showSummary()"
-            :title="title"
-            :path="path"
-            button-text="Play"
-        >
+        <project-summary v-if="showSummary()">
             <template v-slot:img>
                 <img src="~img/pacman.png" />
             </template>
@@ -17,7 +12,7 @@
             </p>
         </project-summary>
 
-        <project-demo v-if="showDemo()" :title="title">
+        <project-demo v-if="showDemo()">
             <template v-slot:demo>
                 <iframe
                     src="https://nate-h.github.io/pacman_js/"
@@ -44,12 +39,14 @@
 <script>
 import ProjectBase from "@/mixins/ProjectBase.vue";
 export default {
-    name: "ProjectPacman",
+    name: "Pacman",
     path: "pacman",
     mixins: [ProjectBase],
     data() {
         return {
-            title: "Pacman, a JS implementation"
+            title: "Pacman",
+            description: "Pure javascript",
+            buttonText: "Play"
         };
     }
 };

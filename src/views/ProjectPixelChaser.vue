@@ -1,11 +1,6 @@
 <template>
     <div>
-        <project-summary
-            v-if="showSummary()"
-            :title="title"
-            :path="path"
-            button-text="Demo"
-        >
+        <project-summary v-if="showSummary()">
             <template v-slot:img>
                 <img src="~img/pacman.png" />
             </template>
@@ -17,7 +12,7 @@
             </p>
         </project-summary>
 
-        <project-demo v-if="showDemo()" :title="title">
+        <project-demo v-if="showDemo()">
             <template v-slot:demo>
                 <iframe
                     src="https://nate-h.github.io/pacman_js/"
@@ -44,12 +39,14 @@
 <script>
 import ProjectBase from "@/mixins/ProjectBase.vue";
 export default {
-    name: "ProjectPixelChaser",
+    name: "PixelChaser",
     path: "pixelchaser",
     mixins: [ProjectBase],
     data() {
         return {
-            title: "Pixel Chaser, a JS image drawer"
+            title: "Pixel Chaser",
+            description: "Pure javascript",
+            buttonText: "Demo"
         };
     }
 };

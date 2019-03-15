@@ -1,11 +1,6 @@
 <template>
     <div>
-        <project-summary
-            v-if="showSummary()"
-            :title="title"
-            :path="path"
-            button-text="My Experience"
-        >
+        <project-summary v-if="showSummary()">
             <template v-slot:img>
                 <vuelogo></vuelogo>
             </template>
@@ -17,7 +12,7 @@
             </p>
         </project-summary>
 
-        <project-demo v-if="showDemo()" :title="title">
+        <project-demo v-if="showDemo()">
             <template v-slot:demo>
                 <div style="position:relative;padding-top:56.25%;">
                     <iframe
@@ -46,12 +41,14 @@
 import vuelogo from "img/vuelogo.svg";
 import ProjectBase from "@/mixins/ProjectBase.vue";
 export default {
-    name: "ProjectVue",
+    name: "Vue",
     path: "vue",
     mixins: [ProjectBase],
     data() {
         return {
-            title: "Vue title"
+            title: "Vue title",
+            description: "Vue, Sass",
+            buttonText: "Experience"
         };
     },
     components: {

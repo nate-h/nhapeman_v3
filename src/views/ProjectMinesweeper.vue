@@ -1,11 +1,6 @@
 <template>
     <div>
-        <project-summary
-            v-if="showSummary()"
-            :title="title"
-            :path="path"
-            button-text="Play"
-        >
+        <project-summary v-if="showSummary()">
             <template v-slot:img>
                 <img src="~img/minesweeper.png" />
             </template>
@@ -17,7 +12,7 @@
             </p>
         </project-summary>
 
-        <project-demo v-if="showDemo()" :title="title">
+        <project-demo v-if="showDemo()">
             <template v-slot:demo>
                 <iframe
                     src="https://nate-h.github.io/minesweeper_js/"
@@ -44,12 +39,14 @@
 <script>
 import ProjectBase from "@/mixins/ProjectBase.vue";
 export default {
-    name: "ProjectMinesweeper",
+    name: "Minesweeper",
     path: "minesweeper",
     mixins: [ProjectBase],
     data() {
         return {
-            title: "Minesweeper implemented in JS"
+            title: "Minesweeper implemented in JS",
+            description: "Pure javascript",
+            buttonText: "Play"
         };
     }
 };

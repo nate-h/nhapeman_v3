@@ -1,11 +1,6 @@
 <template>
     <div>
-        <project-summary
-            v-if="showSummary()"
-            :title="title"
-            :path="path"
-            button-text="Demo"
-        >
+        <project-summary v-if="showSummary()">
             <template v-slot:img>
                 <img src="~img/recordName.png" />
             </template>
@@ -17,7 +12,7 @@
             </p>
         </project-summary>
 
-        <project-demo v-if="showDemo()" :title="title">
+        <project-demo v-if="showDemo()">
             <template v-slot:demo>
                 <div style="position:relative;padding-top:56.25%;">
                     <iframe
@@ -45,12 +40,14 @@
 <script>
 import ProjectBase from "@/mixins/ProjectBase.vue";
 export default {
-    name: "ProjectMyTunes",
+    name: "MyTunes",
     path: "mytunes",
     mixins: [ProjectBase],
     data() {
         return {
-            title: "MyTunes, a Java implemented music player"
+            title: "MyTunes a music player",
+            description: "Java",
+            buttonText: "Demo"
         };
     }
 };

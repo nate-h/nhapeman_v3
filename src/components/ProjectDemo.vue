@@ -19,7 +19,12 @@
 
 <script>
 export default {
-    props: ["title", "img"]
+    data() {
+        return {
+            'title': this.$parent.title,
+            'description': this.$parent.description,
+        }
+    }
 };
 </script>
 

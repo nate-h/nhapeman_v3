@@ -1,11 +1,6 @@
 <template>
     <div>
-        <project-summary
-            v-if="showSummary()"
-            :title="title"
-            :path="path"
-            button-text="Demo"
-        >
+        <project-summary v-if="showSummary()">
             <template v-slot:img>
                 <img src="~img/mario.png" />
             </template>
@@ -24,7 +19,7 @@
             </p>
         </project-summary>
 
-        <project-demo v-if="showDemo()" :title="title">
+        <project-demo v-if="showDemo()">
             <template v-slot:demo>
                 <div style="position:relative;padding-top:56.25%;">
                     <iframe
@@ -52,12 +47,14 @@
 <script>
 import ProjectBase from "@/mixins/ProjectBase.vue";
 export default {
-    name: "ProjectMario",
+    name: "Mario",
     path: "mario",
     mixins: [ProjectBase],
     data() {
         return {
-            title: "Super Mario Bros Reloaded"
+            title: "Super Mario Bros Reloaded",
+            description: "C++ with SDL",
+            buttonText: "Demo"
         };
     }
 };
