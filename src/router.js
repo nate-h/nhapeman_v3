@@ -9,6 +9,22 @@ import ProjectMinesweeper from "./views/ProjectMinesweeper.vue";
 import ProjectMyTunes from "./views/ProjectMyTunes.vue";
 import ProjectVue from "./views/ProjectVue.vue";
 import ProjectPacman from "./views/ProjectPacman.vue";
+import ProjectPixelChaser from "./views/ProjectPixelChaser.vue";
+
+// Setup child routes for projects.
+let projectComponents = [
+    ProjectMario,
+    ProjectMinesweeper,
+    ProjectMyTunes,
+    ProjectVue,
+    ProjectPacman,
+    ProjectPixelChaser
+];
+
+let projectRoutes = [];
+for (let p of projectComponents) {
+    projectRoutes.push({ path: p.path, name: p.name, component: p });
+}
 
 Vue.use(Router);
 
@@ -28,33 +44,7 @@ export default new Router({
             path: "/projects",
             name: "Projects",
             component: Projects,
-            children: [
-                {
-                    path: "mario",
-                    name: "Mario",
-                    component: ProjectMario
-                },
-                {
-                    path: "minesweeper",
-                    name: "Minesweeper",
-                    component: ProjectMinesweeper
-                },
-                {
-                    path: "mytunes",
-                    name: "MyTunes",
-                    component: ProjectMyTunes
-                },
-                {
-                    path: "vue",
-                    name: "Vue",
-                    component: ProjectVue
-                },
-                {
-                    path: "pacman",
-                    name: "Pacman",
-                    component: ProjectPacman
-                }
-            ]
+            children: projectRoutes
         }
     ]
 });

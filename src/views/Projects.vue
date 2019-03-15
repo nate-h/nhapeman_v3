@@ -9,10 +9,11 @@
             </header-container>
 
             <project-mario></project-mario>
-            <project-minesweeper></project-minesweeper>
+            <project-pixel-chaser></project-pixel-chaser>
             <project-my-tunes></project-my-tunes>
-            <project-vue></project-vue>
             <project-pacman></project-pacman>
+            <project-minesweeper></project-minesweeper>
+            <project-vue></project-vue>
         </div>
 
         <router-view></router-view>
@@ -25,6 +26,7 @@ import ProjectMinesweeper from "@/views/ProjectMinesweeper.vue";
 import ProjectMyTunes from "@/views/ProjectMyTunes.vue";
 import ProjectVue from "@/views/ProjectVue.vue";
 import ProjectPacman from "@/views/ProjectPacman.vue";
+import ProjectPixelChaser from "@/views/ProjectPixelChaser.vue";
 export default {
     name: "Projects",
     components: {
@@ -32,7 +34,8 @@ export default {
         "project-minesweeper": ProjectMinesweeper,
         "project-my-tunes": ProjectMyTunes,
         "project-vue": ProjectVue,
-        "project-pacman": ProjectPacman
+        "project-pacman": ProjectPacman,
+        "project-pixel-chaser": ProjectPixelChaser
     }
 };
 </script>

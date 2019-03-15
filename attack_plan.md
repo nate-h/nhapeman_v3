@@ -6,8 +6,8 @@
     - mytunes        *
     - mario          *
     - this website   *
-    - dfs drawer
-    - minesweeper
+    - dfs drawer     *
+    - minesweeper    *
     - pacman         *
     - letter recog
     - multi shooter

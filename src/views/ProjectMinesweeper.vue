@@ -1,9 +1,9 @@
 <template>
     <div>
         <project-summary
-            v-if="$route.name !== name"
+            v-if="showSummary()"
             button-text="Play It"
-            :link="link"
+            :link="path"
             :name="name"
         >
             <template v-slot:img>
@@ -17,7 +17,7 @@
             </p>
         </project-summary>
 
-        <project-demo v-if="$route.name === name" :name="name">
+        <project-demo v-if="showDemo()">
             <template v-slot:demo>
                 <iframe
                     src="https://nate-h.github.io/minesweeper_js/"
@@ -42,15 +42,16 @@
 </template>
 
 <script>
+import ProjectBase from "@/mixins/ProjectBase.vue";
 export default {
     name: "ProjectMinesweeper",
+    path: "minesweeper",
+    mixins: [ProjectBase],
     data() {
         return {
-            name: "Minesweeper",
-            link: "minesweeper"
+            title: "Minesweeper implemented in JS"
         };
-    },
-    methods: {}
+    }
 };
 </script>
 

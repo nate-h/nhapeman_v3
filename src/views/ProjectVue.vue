@@ -44,15 +44,16 @@
 
 <script>
 import vuelogo from "img/vuelogo.svg";
+import ProjectBase from "@/mixins/ProjectBase.vue";
 export default {
     name: "ProjectVue",
+    path: "vue",
+    mixins: [ProjectBase],
     data() {
         return {
-            name: "Vue",
-            link: "vue"
+            title: "Vue title"
         };
     },
-    methods: {},
     components: {
         vuelogo
     }

@@ -2,7 +2,7 @@
     <div>
         <project-summary
             v-if="$route.name !== name"
-            button-text="Play It"
+            button-text="View Demo"
             :link="link"
             :name="name"
         >
@@ -44,12 +44,12 @@
 <script>
 import ProjectBase from "@/mixins/ProjectBase.vue";
 export default {
-    name: "ProjectPacman",
-    path: "pacman",
+    name: "ProjectPixelChaser",
+    path: "pixelchaser",
     mixins: [ProjectBase],
     data() {
         return {
-            title: "Pacman, a JS implementation"
+            title: "Pixel Chaser, a JS image drawer"
         };
     }
 };

@@ -1,9 +1,9 @@
 <template>
     <div>
         <project-summary
-            v-if="$route.name !== name"
+            v-if="showSummary()"
             button-text="View Gameplay"
-            :link="link"
+            :link="path"
             :name="name"
         >
             <template v-slot:img>
@@ -24,7 +24,7 @@
             </p>
         </project-summary>
 
-        <project-demo v-if="$route.name === name" :name="name">
+        <project-demo v-if="showDemo()">
             <template v-slot:demo>
                 <div style="position:relative;padding-top:56.25%;">
                     <iframe
@@ -50,15 +50,16 @@
 </template>
 
 <script>
+import ProjectBase from "@/mixins/ProjectBase.vue";
 export default {
     name: "ProjectMario",
+    path: "mario",
+    mixins: [ProjectBase],
     data() {
         return {
-            name: "Mario",
-            link: "mario"
+            title: "Super Mario Bros Reloaded"
         };
-    },
-    methods: {}
+    }
 };
 </script>
 
