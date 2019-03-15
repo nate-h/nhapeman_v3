@@ -38,17 +38,20 @@ export default {
 
     .header {
         margin-bottom: $margin-large;
-    }
 
-    .description {
-        @extend %default-size;
-        color: $dark3;
-        font-weight: bold;
-        margin-left: $margin;
+        .title {
+            display: inline-block;
+        }
+
+        .description {
+            @extend %default-size;
+            color: $dark3;
+            font-weight: bold;
+            margin-left: $margin;
+        }
     }
 
     .demo {
-        // flex-grow: 0;
     }
 
     .text {
