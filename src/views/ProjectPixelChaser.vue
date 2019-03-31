@@ -39,6 +39,7 @@
 export default {
     name: "PixelChaser",
     path: "pixelchaser",
+    listed: false,
     data() {
         return {
             title: "Pixel Chaser",

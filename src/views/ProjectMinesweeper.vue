@@ -39,6 +39,7 @@
 export default {
     name: "Minesweeper",
     path: "minesweeper",
+    listed: true,
     data() {
         return {
             title: "Minesweeper Remake",

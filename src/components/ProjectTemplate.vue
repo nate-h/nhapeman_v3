@@ -69,7 +69,16 @@ export default {
         }
     },
     created: function() {
-        // "name", "path",
+        let neededOptions = ["name", "path", "listed"];
+        for (const prop of neededOptions) {
+            if (
+                this.$parent.$options[prop] === null ||
+                this.$parent.$options[prop] === undefined
+            ) {
+                console.error(`Need to override ${prop}`);
+            }
+        }
+
         let neededOverrides = ["title", "description", "buttonText"];
         for (let prop of neededOverrides) {
             if (

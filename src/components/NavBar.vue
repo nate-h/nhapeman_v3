@@ -61,12 +61,20 @@ export default {
     props: [],
     methods: {
         hasChildren(link) {
-            return "children" in link && link["children"].length > 0;
+            return "children" in link && link.children.length > 0;
         }
     },
     watch: {},
     created() {
+        // Setup routes and remove children that aren't listed.
         this.routes = this.$router.options.routes;
+        for (const route of this.routes) {
+            if (Array.isArray(route.children)) {
+                route.children = route.children.filter(
+                    route => route.listed === true
+                );
+            }
+        }
     },
     components: {
         arrowSvg

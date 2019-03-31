@@ -8,12 +8,9 @@
                 </p>
             </header-container>
 
-            <project-mario></project-mario>
-            <project-pixel-chaser></project-pixel-chaser>
-            <project-my-tunes></project-my-tunes>
-            <project-pacman></project-pacman>
-            <project-minesweeper></project-minesweeper>
-            <project-vue></project-vue>
+            <div v-for="project in projects" :key="project.name">
+                <component v-bind:is="project"></component>
+            </div>
         </div>
 
         <router-view></router-view>
@@ -29,13 +26,17 @@ import ProjectPacman from "@/views/ProjectPacman.vue";
 import ProjectPixelChaser from "@/views/ProjectPixelChaser.vue";
 export default {
     name: "Projects",
-    components: {
-        "project-mario": ProjectMario,
-        "project-minesweeper": ProjectMinesweeper,
-        "project-my-tunes": ProjectMyTunes,
-        "project-vue": ProjectVue,
-        "project-pacman": ProjectPacman,
-        "project-pixel-chaser": ProjectPixelChaser
+    created() {
+        console.log("ProjectMario :", ProjectMario);
+        this.projects = [
+            ProjectMario,
+            ProjectPixelChaser,
+            ProjectVue,
+            ProjectMyTunes,
+            ProjectPacman,
+            ProjectMinesweeper
+        ];
+        this.projects = this.projects.filter(p => p.listed === true);
     }
 };
 </script>

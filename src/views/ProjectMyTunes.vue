@@ -44,6 +44,7 @@
 export default {
     name: "MyTunes",
     path: "mytunes",
+    listed: true,
     data() {
         return {
             title: "MyTunes, a music player",

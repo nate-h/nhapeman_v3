@@ -41,6 +41,7 @@ import vuelogo from "img/vuelogo.svg";
 export default {
     name: "Vue",
     path: "vue",
+    listed: true,
     data() {
         return {
             title: "Learning Vue",

@@ -39,6 +39,7 @@
 export default {
     name: "Pacman",
     path: "pacman",
+    listed: true,
     data() {
         return {
             title: "Pacman Remake",

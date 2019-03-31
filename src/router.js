@@ -23,7 +23,12 @@ let projectComponents = [
 
 let projectRoutes = [];
 for (let p of projectComponents) {
-    projectRoutes.push({ path: p.path, name: p.name, component: p });
+    projectRoutes.push({
+        path: p.path,
+        name: p.name,
+        component: p,
+        listed: p.listed
+    });
 }
 
 Vue.use(Router);

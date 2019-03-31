@@ -1,6 +1,8 @@
 # Immediate goals.
-Write summaries for Pacman and minesweeper and vue
-Figure out and complete the project template
+  * Finish summaries.
+    - Pixel chaser.
+    - Mine sweeper.
+    - Vue.
 
 # TODO
   * Finish dfs drawer and add example to home page.
