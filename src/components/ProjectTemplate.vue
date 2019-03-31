@@ -1,16 +1,13 @@
 <template>
     <div class="project-template">
-        <!-- -------------------------------------------------------------- -->
+        <!-- Summary -->
         <div class="summary-template l-to-r lt" v-if="showSummary()">
-            <!-- Left -->
             <div class="leftside">
                 <router-link :to="'/projects/' + path" class="link" v-if="path">
                     <slot name="summaryImage" class="thumbnail"></slot>
                 </router-link>
                 <slot name="summaryImage" class="thumbnail" v-if="!path"></slot>
             </div>
-
-            <!-- Right -->
             <div class="rightside">
                 <div class="header">
                     <h1 class="title">{{ title }}</h1>
@@ -26,21 +23,15 @@
             </div>
         </div>
 
-        <!-- -------------------------------------------------------------- -->
-
+        <!-- Demo -->
         <div class="demo-template t-to-b" v-if="showDemo()">
-            <!-- Header -->
             <div class="header">
                 <h1 class="title">{{ title }}</h1>
                 <span class="description">{{ description }}</span>
             </div>
-
-            <!-- Demo -->
             <div class="demo">
                 <slot name="demo"></slot>
             </div>
-
-            <!-- Description -->
             <div class="text">
                 <slot name="summaryText"></slot>
                 <slot name="demoDetails"></slot>
@@ -101,7 +92,6 @@ $img-side: 200px;
     padding: $padding-large;
     width: 100%;
 
-    // Rules for shared header.
     .header {
         .title {
             display: inline-block;
