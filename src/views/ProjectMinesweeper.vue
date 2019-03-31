@@ -1,47 +1,45 @@
 <template>
-    <div>
-        <project-summary v-if="showSummary()">
-            <template v-slot:img>
-                <img src="~img/minesweeper.png" />
-            </template>
+    <project-template>
+        <template v-slot:summaryImage>
+            <img src="~img/minesweeper.png" />
+        </template>
+
+        <template v-slot:summaryText>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
                 aut consectetur quia, recusandae quod, debitis reprehenderit
                 dolorum dolores inventore iusto ad blanditiis dolorem, quo
                 aliquid sit veniam? Praesentium, facere voluptatem.
             </p>
-        </project-summary>
+        </template>
 
-        <project-demo v-if="showDemo()">
-            <template v-slot:demo>
-                <iframe
-                    src="https://nate-h.github.io/minesweeper_js/"
-                    frameborder="0"
-                    allow="autoplay; encrypted-media"
-                    scrolling="no"
-                    allowfullscreen
-                    style="width:400px;height:370px;"
-                ></iframe>
-            </template>
-            <template v-slot:text>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Alias aut consectetur quia, recusandae quod, debitis
-                    reprehenderit dolorum dolores inventore iusto ad blanditiis
-                    dolorem, quo aliquid sit veniam? Praesentium, facere
-                    voluptatem.
-                </p>
-            </template>
-        </project-demo>
-    </div>
+        <template v-slot:demo>
+            <iframe
+                src="https://nate-h.github.io/minesweeper_js/"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                scrolling="no"
+                allowfullscreen
+                style="width:400px;height:370px;"
+            ></iframe>
+        </template>
+
+        <template v-slot:demoDetails>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias aut consectetur quia, recusandae quod, debitis
+                reprehenderit dolorum dolores inventore iusto ad blanditiis
+                dolorem, quo aliquid sit veniam? Praesentium, facere
+                voluptatem.
+            </p>
+        </template>
+    </project-template>
 </template>
 
 <script>
-import ProjectBase from "@/mixins/ProjectBase.vue";
 export default {
     name: "Minesweeper",
     path: "minesweeper",
-    mixins: [ProjectBase],
     data() {
         return {
             title: "Minesweeper Remake",

@@ -3,13 +3,11 @@ import App from "./App.vue";
 import router from "./router";
 import SVGLink from "@/components/SVGLink.vue";
 import HeaderContainer from "@/components/HeaderContainer.vue";
-import ProjectSummary from "@/components/ProjectSummary.vue";
-import ProjectDemo from "@/components/ProjectDemo.vue";
+import ProjectTemplate from "@/components/ProjectTemplate.vue";
 
 Vue.component("svg-link", SVGLink);
 Vue.component("header-container", HeaderContainer);
-Vue.component("project-summary", ProjectSummary);
-Vue.component("project-demo", ProjectDemo);
+Vue.component("project-template", ProjectTemplate);
 
 Vue.config.productionTip = false;
 

@@ -1,9 +1,10 @@
 <template>
-    <div>
-        <project-summary v-if="showSummary()">
-            <template v-slot:img>
-                <img src="~img/mario.png" />
-            </template>
+    <project-template>
+        <template v-slot:summaryImage>
+            <img src="~img/mario.png" />
+        </template>
+
+        <template v-slot:summaryText>
             <p>
                 Being a 90's kid, I played my fair share of Mario based games.
                 The next logical step was to create my own version of my beloved
@@ -17,39 +18,35 @@
                 management, and threading. Click View Gameplay to see the
                 result!
             </p>
-        </project-summary>
+        </template>
 
-        <project-demo v-if="showDemo()">
-            <template v-slot:demo>
-                <div style="position:relative;padding-top:56.25%;">
-                    <iframe
-                        src="https://www.youtube.com/embed/EMslyjWIPGo"
-                        frameborder="0"
-                        allow="autoplay; encrypted-media"
-                        allowfullscreen
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                    ></iframe>
-                </div>
-            </template>
-            <template v-slot:text>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Alias aut consectetur quia, recusandae quod, debitis
-                    reprehenderit dolorum dolores inventore iusto ad blanditiis
-                    dolorem, quo aliquid sit veniam? Praesentium, facere
-                    voluptatem.
-                </p>
-            </template>
-        </project-demo>
-    </div>
+        <template v-slot:demo>
+            <div style="position:relative;padding-top:56.25%;">
+                <iframe
+                    src="https://www.youtube.com/embed/EMslyjWIPGo"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                ></iframe>
+            </div>
+        </template>
+
+        <template v-slot:demoDetails>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                aut consectetur quia, recusandae quod, debitis reprehenderit
+                dolorum dolores inventore iusto ad blanditiis dolorem, quo
+                aliquid sit veniam? Praesentium, facere voluptatem.
+            </p>
+        </template>
+    </project-template>
 </template>
 
 <script>
-import ProjectBase from "@/mixins/ProjectBase.vue";
 export default {
     name: "Mario",
     path: "mario",
-    mixins: [ProjectBase],
     data() {
         return {
             title: "Super Mario Bros Reloaded",
