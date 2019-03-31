@@ -26,11 +26,10 @@
 
         <template v-slot:demoDetails>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Alias aut consectetur quia, recusandae quod, debitis
-                reprehenderit dolorum dolores inventore iusto ad blanditiis
-                dolorem, quo aliquid sit veniam? Praesentium, facere
-                voluptatem.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                aut consectetur quia, recusandae quod, debitis reprehenderit
+                dolorum dolores inventore iusto ad blanditiis dolorem, quo
+                aliquid sit veniam? Praesentium, facere voluptatem.
             </p>
         </template>
     </project-template>

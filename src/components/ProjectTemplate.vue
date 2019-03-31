@@ -1,7 +1,7 @@
 <template>
     <div class="project-template">
         <!-- -------------------------------------------------------------- -->
-        <div class="summary l-to-r lt" v-if="showSummary()">
+        <div class="summary-template l-to-r lt" v-if="showSummary()">
             <!-- Left -->
             <div class="leftside">
                 <router-link :to="'/projects/' + path" class="link" v-if="path">
@@ -28,7 +28,7 @@
 
         <!-- -------------------------------------------------------------- -->
 
-        <div class="demo t-to-b" v-if="showDemo()">
+        <div class="demo-template t-to-b" v-if="showDemo()">
             <!-- Header -->
             <div class="header">
                 <h1 class="title">{{ title }}</h1>
@@ -101,58 +101,59 @@ $img-side: 200px;
     padding: $padding-large;
     width: 100%;
 
-    .description {
-        @extend %default-size;
-        color: $dark3;
-        font-weight: bold;
-        margin-left: $margin;
-    }
-
-    .title {
-        display: inline-block;
-    }
-}
-
-.demo {
+    // Rules for shared header.
     .header {
-        margin-bottom: $margin-large;
-    }
-
-    .demo {
-    }
-
-    .text {
-        padding: $padding-x-large;
-    }
-}
-
-.summary {
-    .leftside {
-        @extend %l-to-r, .ca;
-        flex-grow: 0;
-        flex-shrink: 0;
-        margin-right: $padding-large;
-        width: $img-side;
-
-        img {
-            width: $img-side;
+        .title {
+            display: inline-block;
         }
 
-        svg {
-            width: $img-side;
+        .description {
+            @extend %default-size;
+            color: $dark3;
+            font-weight: bold;
+            margin-left: $margin;
         }
     }
 
-    .rightside {
-        flex-grow: 1;
-
+    .demo-template {
         .header {
-            @extend %l-to-r, .ca;
-            margin-bottom: $margin-small;
+            margin-bottom: $margin-large;
+        }
 
-            .link {
-                margin-left: auto;
-                @extend %router-link;
+        .text {
+            padding: $padding-x-large;
+            text-align: left;
+        }
+    }
+
+    .summary-template {
+        .leftside {
+            @extend %l-to-r, .ca;
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-right: $padding-large;
+            width: $img-side;
+
+            img {
+                width: $img-side;
+            }
+
+            svg {
+                width: $img-side;
+            }
+        }
+
+        .rightside {
+            flex-grow: 1;
+
+            .header {
+                @extend %l-to-r, .ca;
+                margin-bottom: $margin-small;
+
+                .link {
+                    margin-left: auto;
+                    @extend %router-link;
+                }
             }
         }
     }
