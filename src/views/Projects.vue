@@ -27,7 +27,6 @@ import ProjectPixelChaser from "@/views/ProjectPixelChaser.vue";
 export default {
     name: "Projects",
     created() {
-        console.log("ProjectMario :", ProjectMario);
         this.projects = [
             ProjectMario,
             ProjectPixelChaser,
