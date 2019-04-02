@@ -1,36 +1,33 @@
 <template>
-    <project-template>
+    <project-template class="project-vue">
         <template v-slot:summaryImage>
             <vuelogo></vuelogo>
         </template>
 
         <template v-slot:summaryText>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                aut consectetur quia, recusandae quod, debitis reprehenderit
-                dolorum dolores inventore iusto ad blanditiis dolorem, quo
-                aliquid sit veniam? Praesentium, facere voluptatem.
+                Having worked with AngularJS professionally, I wanted to take a
+                stab at learning another Javascript framework. The obvious one
+                to learn was React but my curiosity for Vue steered me in it's
+                direction. After diving into it a little bit, I fell in love! I
+                mean what's not to like? Single file components, borrowed
+                features from AngularJS, great documentation and mostly written
+                by one dude so it doesn't suffer from having
+                <a href="https://www.youtube.com/watch?v=QrGrOK8oZG8"
+                    >too many cooks</a
+                >. The best part is that it's been really easy to learn!
             </p>
         </template>
 
         <template v-slot:demo>
-            <div style="position:relative;padding-top:56.25%;">
-                <iframe
-                    src="https://www.youtube.com/embed/1c4erMvMnVQ"
-                    frameborder="0"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                ></iframe>
-            </div>
+            <vuelogo></vuelogo>
         </template>
 
         <template v-slot:demoDetails>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                aut consectetur quia, recusandae quod, debitis reprehenderit
-                dolorum dolores inventore iusto ad blanditiis dolorem, quo
-                aliquid sit veniam? Praesentium, facere voluptatem.
+                One of the cool things about Vue is that it comes with batteries
+                included. Getting a website up and running locally is as easy
+                as:
             </p>
         </template>
     </project-template>
@@ -46,7 +43,7 @@ export default {
         return {
             title: "Learning Vue",
             description: "Vue, Sass",
-            buttonText: "My Experience"
+            buttonText: "Read More"
         };
     },
     components: {
@@ -55,4 +52,13 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.project-vue {
+    $vue-logo-side: 300px;
+    .demo {
+        svg {
+            height: $vue-logo-side;
+        }
+    }
+}
+</style>
