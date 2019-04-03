@@ -28,6 +28,7 @@
                 One of the cool things about Vue is that it comes with batteries
                 included. Getting a website up and running locally is as easy
                 as:
+                <snippet lang="js">const test = a;</snippet>
             </p>
         </template>
     </project-template>
