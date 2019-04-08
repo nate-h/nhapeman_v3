@@ -25,6 +25,7 @@
     "eslint": "^5.14.1",
     "eslint-plugin-vue": "^5.2.2",
     "node-sass": "^4.9.0",
+    "raw-loader": "^2.0.0",
     "sass-loader": "^7.0.1",
     "vue-prism-component": "^1.1.1",
     "vue-svg-loader": "^0.11.0",
