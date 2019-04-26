@@ -28,7 +28,7 @@
                 One of the cool things about Vue is that it comes with batteries
                 included. Getting a website up and running locally is as easy
                 as:
-                <snippet lang="js">{{ test }}</snippet>
+                <snippet lang="bash">{{ VueSiteSetup }}</snippet>
             </p>
         </template>
     </project-template>
@@ -36,7 +36,7 @@
 
 <script>
 import vuelogo from "img/vuelogo.svg";
-import tests from "@/assets/text/test.txt";
+import VueSiteSetup from "raw-loader!@/assets/text/VueSiteSetup.txt";
 export default {
     name: "Vue",
     path: "vue",
@@ -46,14 +46,11 @@ export default {
             title: "Learning Vue",
             description: "Vue, Sass",
             buttonText: "Read More",
-            test: tests
+            VueSiteSetup: VueSiteSetup
         };
     },
     components: {
         vuelogo
-    },
-    created() {
-        console.log("test :", this.test);
     }
 };
 </script>

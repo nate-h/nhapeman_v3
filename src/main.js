@@ -1,6 +1,9 @@
 // yarn add prismjs
 import "prismjs";
 import "prismjs/themes/prism.css";
+import "prismjs/components/prism-bash.min.js";
+import "prismjs/components/prism-scss.min.js";
+import "prismjs/components/prism-python.min.js";
 
 import Vue from "vue";
 import App from "./App.vue";

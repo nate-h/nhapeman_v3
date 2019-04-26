@@ -10,13 +10,7 @@ module.exports = {
     },
     chainWebpack: config => {
         config.module
-            .rules.delete("svg").end()
-            .rule('raw')
-            .test(/\.text$/)
-            .use('raw-loader')
-            .loader('raw-loader')
-            .end()
-            ;
+            .rules.delete("svg").end();
     },
     configureWebpack: {
         resolve: {
