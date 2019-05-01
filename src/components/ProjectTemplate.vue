@@ -98,7 +98,7 @@ $img-side: 200px;
 .project-template {
     background-color: $light1;
     max-width: map-get($breakpoints, large);
-    padding: $padding-large;
+    padding: $padding-x-large;
     width: 100%;
 
     .header {
@@ -115,6 +115,8 @@ $img-side: 200px;
     }
 
     .demo-template {
+        margin: 0 $margin-xxx-large;
+
         .header {
             margin-bottom: $margin-large;
         }
