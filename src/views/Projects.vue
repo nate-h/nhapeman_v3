@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <router-view></router-view>
+        <router-view class="project-child"></router-view>
     </div>
 </template>
 
@@ -47,6 +47,12 @@ export default {
 
     .list > *:not(:last-child) {
         margin-bottom: $margin-large;
+    }
+
+    .project-child {
+        p {
+            margin: $margin-medium 0;
+        }
     }
 }
 </style>
