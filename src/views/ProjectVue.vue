@@ -36,14 +36,14 @@
         <template v-slot:demoDetails>
             <p>
                 My experience with Vue so far has been completely positive,
-                unlike my experience with AngularJS which was annoying at times.
-                I suspected that the documentation for AngularJS was bad but it
-                wasn't until I dove into Vue that I realized what I was missing.
-                The best way to read AngularJS documentation is to ignore it
-                completly and use stackoverflow. I found it way too complex for
-                describing simple concepts. It also uses other AngularJS terms
-                to define something. So You almost need an understanding of
-                everything else to understand one thing.
+                unlike my experience with AngularJS which could have been
+                better. I suspected that the documentation for AngularJS was bad
+                but it wasn't until I dove into Vue that I realized what I was
+                missing. The best way to read AngularJS documentation is to
+                ignore it completly and use stackoverflow. I found it way too
+                complex for describing simple concepts. It also uses other
+                AngularJS terms to define something. So You almost need an
+                understanding of everything else to understand one thing.
             </p>
             <p>
                 Vue on the other hand was much easier to learn. I'll admit that
@@ -52,47 +52,55 @@
                 hard to translate a lot of my knowledge over from AngularJS. I
                 think if I didn't have a background in AngularJS or any web
                 framework for that matter, Vue would have been easy to learn
-                because it has great simplictic documentation. Working with it
-                so far, I find that it has a good balance of letting the
-                developer do what they want while creating a structure that
-                promotes some order to create cleaner code.
+                because it's well designed and has documentation geared towards
+                newbies. I think one of the reasons why Vue became the framework
+                it is today is that it's mostly written by one dude,
+                <a href="https://twitter.com/youyuxi?lang=en">Evan You</a> so
+                perhaps it doesn't suffer from having
+                <a href="https://www.youtube.com/watch?v=QrGrOK8oZG8"
+                    >too many cooks</a
+                >.
             </p>
             <p>
-                An example of this are the properties you can define when
-                creating a component. These properties like watch, props,
-                methods and data provide a formal place to group similar items.
-                This differs from AngularJS because
+                Working with it so far, I find that it has a good balance of
+                giving the developer some freedom while still requiring some
+                order in places that create cleaner more manageable code. An
+                example of this are the properties you can define when creating
+                a component. These properties like watch, props, methods and
+                data provide a formal place to group similar items. This differs
+                from AngularJS because there's no formal place to define
+                something like a watcher in an Angular JS controller. Just
+                define whereever you like in the controller function or anywhere
+                else if you have a handle to that controllers score.
             </p>
             <p>
-                Another great thing Vue provides is
+                Another great feature Vue has is the ability to define a
+                component in one file. These
                 <a
                     href="https://vuejs.org/v2/guide/single-file-components.html"
                 >
                     single file components</a
-                >. Single file components are components fully defined in one
-                file. You stuff the css, javascript and html in one file as
-                opposed to 3 seperate files. The buety of this feature is that
+                >
+                simply have the Javascript, CSS, and HTML stuffed into 1 file as
+                opposed to 3 seperate files. The beauty of this feature is that
                 developers are more incentivised to break up their code into
-                smaller pieces. I find it annoying when you want to create a
-                small component but need to create 3 files for your css/js/html
-                that have 30 lines each. Being able to throw all 3 snippets into
-                one file makes it so: you're not overwhlemed by number of files,
-                you can iterate faster since all the code is in one file, delete
-                the component easier.
+                smaller pieces if you're only adding 1 file as opposed to three.
+                I find it annoying when you want to create a small component but
+                need to create 3 files for your css/js/html that have 0-30 lines
+                each. Being able to throw all 3 snippets into one file makes it
+                so: you're not overwhlemed by number of files, you can bounce
+                around all the code faster since it's contained in one file,
+                delete the component with ease.
             </p>
             <p>
-                The last thing I like about vue is how easy it is to dive into
-                it. It takes 4 lines to get a local website up and running.
+                The last thing I like about Vue is how easy it is to dive into
+                it. The first step of learning anything new is getting your foot in
+                the door and with the Vue CLI, it's that much easier to get started with Vue.
+                Using the client, it takes 4 lines to get a local website up and running.
+                And while configuring a new project, you can choose between many popular 
+                options for things like linters and testing frameworks.
+                Get started today with:
                 <snippet lang="bash">{{ VueSiteSetup }}</snippet>
-
-                syntax similar to angular, great documentation and mostly
-                written by one dude so it doesn't suffer from having
-                <a href="https://www.youtube.com/watch?v=QrGrOK8oZG8"
-                    >too many cooks</a
-                >. The best part is that it's been really easy to learn! One of
-                the cool things about Vue is that it comes with batteries
-                included. Getting a website up and running locally is as easy
-                as:
             </p>
         </template>
     </project-template>
