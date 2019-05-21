@@ -17,9 +17,9 @@
                         <span>{{ buttonText }}</span>
                     </router-link>
                 </div>
-                <p>
+                <div>
                     <slot name="summaryText"></slot>
-                </p>
+                </div>
             </div>
         </div>
 

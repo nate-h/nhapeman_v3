@@ -9,8 +9,7 @@ module.exports = {
         }
     },
     chainWebpack: config => {
-        config.module
-            .rules.delete("svg").end();
+        config.module.rules.delete("svg").end();
     },
     configureWebpack: {
         resolve: {
