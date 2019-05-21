@@ -37,13 +37,13 @@
             <p>
                 My experience with Vue so far has been completely positive,
                 unlike my experience with AngularJS which was annoying at times.
-                I suspected that the documentation for AngularJS was bad but
-                it wasn't until I dove into Vue that I realized what I was missing. The best way to read
-                AngularJS documentation is to ignore it completly and use
-                stackoverflow. I found it way too complex for describing simple
-                concepts. It also uses other AngularJS terms to define something.
-                So You almost need an understanding of everything else to
-                understand one thing.
+                I suspected that the documentation for AngularJS was bad but it
+                wasn't until I dove into Vue that I realized what I was missing.
+                The best way to read AngularJS documentation is to ignore it
+                completly and use stackoverflow. I found it way too complex for
+                describing simple concepts. It also uses other AngularJS terms
+                to define something. So You almost need an understanding of
+                everything else to understand one thing.
             </p>
             <p>
                 Vue on the other hand was much easier to learn. I'll admit that
@@ -52,16 +52,16 @@
                 hard to translate a lot of my knowledge over from AngularJS. I
                 think if I didn't have a background in AngularJS or any web
                 framework for that matter, Vue would have been easy to learn
-                because it has great simplictic documentation.
-                Working with it so far, I find that it has a good balance of
-                letting the developer do what they want while creating a
-                structure that promotes some order to create cleaner code.
+                because it has great simplictic documentation. Working with it
+                so far, I find that it has a good balance of letting the
+                developer do what they want while creating a structure that
+                promotes some order to create cleaner code.
             </p>
             <p>
                 An example of this are the properties you can define when
                 creating a component. These properties like watch, props,
                 methods and data provide a formal place to group similar items.
-                This differs from AngularJS because 
+                This differs from AngularJS because
             </p>
             <p>
                 Another great thing Vue provides is
