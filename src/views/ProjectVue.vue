@@ -61,7 +61,15 @@
                 An example of this are the properties you can define when
                 creating a component. These properties like watch, props,
                 methods and data provide a formal place to group similar items.
-                This differs from AngularJS because
+                Vue also provides life cycle hooks that allow you to do stuff at
+                the precise time in the component creation. AngularJS has some
+                formal ways to group common functionality and even provides some
+                life cycle hooks but it's very minimal. Looking back at most of
+                the controllers I wrote, they all would have benefitted by
+                having one place to define the watchers or one place to define
+                scope variables. I still developed my own standards to attempt to have
+                that behavior but it would have been much easier/ cleaner if the
+                standard was built into the framework.
             </p>
             <p>
                 Another great thing Vue provides is
@@ -77,22 +85,14 @@
                 small component but need to create 3 files for your css/js/html
                 that have 30 lines each. Being able to throw all 3 snippets into
                 one file makes it so: you're not overwhlemed by number of files,
-                you can iterate faster since all the code is in one file, delete
+                you can bounce around the code faster since it's all in one file, delete
                 the component easier.
             </p>
             <p>
                 The last thing I like about vue is how easy it is to dive into
-                it. It takes 4 lines to get a local website up and running.
+                it. It takes 4 lines to get a local website up and running. Dive
+                into it today with:
                 <snippet lang="bash">{{ VueSiteSetup }}</snippet>
-
-                syntax similar to angular, great documentation and mostly
-                written by one dude so it doesn't suffer from having
-                <a href="https://www.youtube.com/watch?v=QrGrOK8oZG8"
-                    >too many cooks</a
-                >. The best part is that it's been really easy to learn! One of
-                the cool things about Vue is that it comes with batteries
-                included. Getting a website up and running locally is as easy
-                as:
             </p>
         </template>
     </project-template>
