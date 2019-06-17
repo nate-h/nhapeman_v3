@@ -18,10 +18,21 @@
                     I've worked on have been extremely interesting and exciting
                     to work on. The longest project I worked on was our in-house
                     geo-spacial game engine that was built for simulations. The
-                    engine was written in c++ and used panda3d, an open source
-                    3D game engine. Currently, I am working as a front-end
-                    engineer on an in-house website used to collect training
-                    data for machine learning algorithms.
+                    engine was written in c++ on top of panda3d, an open source
+                    3D game engine.
+                    Currently I work on a machine learning project and do everything
+                    from full stack development, data science to machine learning.
+                    My big contribution to this project is creating the majority
+                    of an internal annotation website. The website can be used to
+                    fully annotate our images but works with external sources of data.
+                    It also has powerful tools to analyze the data.
+                    Some of the things I do
+                    on a weekly basis for this project are:
+                    managing and improving the internal annnotation website,
+                    making sure all of the annotators are happy and working,
+                    running a multi-stage data pipeline on all of our data, and analyzing our annotation data to find useful insights and to shape the direction when need to move it in.
+
+
                 </p>
             </job-container>
             <job-container
