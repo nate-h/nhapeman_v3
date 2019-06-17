@@ -6,10 +6,9 @@
 
         <template v-slot:summaryText>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                aut consectetur quia, recusandae quod, debitis reprehenderit
-                dolorum dolores inventore iusto ad blanditiis dolorem, quo
-                aliquid sit veniam? Praesentium, facere voluptatem.
+                Minesweeper was one of the first games I remade as a programmer.
+                Never played the game too much but thought it would be fun
+                to recreate and more importantly achievable.
             </p>
         </template>
 
@@ -26,10 +25,6 @@
 
         <template v-slot:demoDetails>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                aut consectetur quia, recusandae quod, debitis reprehenderit
-                dolorum dolores inventore iusto ad blanditiis dolorem, quo
-                aliquid sit veniam? Praesentium, facere voluptatem.
             </p>
         </template>
     </project-template>
