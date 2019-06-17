@@ -9,14 +9,13 @@
                 Being a 90's kid, I played my fair share of Mario based games.
                 The next logical step was to create my own version of my beloved
                 childhood game! So being fairly brand new to programming, I
-                thought it was a good idea to recreate some of the basic
+                thought it was a great idea to recreate some of the basic
                 functionality of Super Mario Bros. The hardest part of this for
                 sure was trying to acquire all of the art for the game. So much
                 so that I started borrowing assets from other games. It was an
                 amazing learning experience to teach me c++ and polymorphism. It
                 was also a good introduction to data structures, memory
-                management, and threading. Click <span class="red">Demo</span>
-                to see the result!
+                management, and threading.
             </p>
         </template>
 
