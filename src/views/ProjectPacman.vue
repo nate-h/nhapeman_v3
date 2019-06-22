@@ -26,10 +26,23 @@
 
         <template v-slot:demoDetails>
             <p>
-                A lot of the fun I got from creating this game was in trying to optimize it. For instance, rather than rendering everything in the level each frame, I only rendered were the changes happened in the game. I also made sure I used the best Data Structures and algorithms so no unnecessary work was done.
+                A lot of the fun I got from creating this game was in trying to
+                optimize it. For instance, rather than rendering everything in
+                the level each frame, I only rendered were the changes happened
+                in the game. I also made sure I used the best Data Structures
+                and algorithms so no unnecessary work was done.
             </p>
             <p>
-                The hardest thing was creating the AI for the ghost. In order to do this, I had to transform the original two dimensional array map into a graph. The ghost can then navigate through the map using the nodes as reference points. They can use these nodes to move towards Pacman by checking which node Pacman is going towards, or to move around the map randomly. The orange ghost in the original Pacman moves this way but most peope don't notice since they are trying to survive. Now to get each ghost to move towards Pacman I used Dijkstra's algorithm to compute the fastest path.
+                The hardest thing was creating the AI for the ghost. In order to
+                do this, I had to transform the original two dimensional array
+                map into a graph. The ghost can then navigate through the map
+                using the nodes as reference points. They can use these nodes to
+                move towards Pacman by checking which node Pacman is going
+                towards, or to move around the map randomly. The orange ghost in
+                the original Pacman moves this way but most peope don't notice
+                since they are trying to survive. Now to get each ghost to move
+                towards Pacman I used Dijkstra's algorithm to compute the
+                fastest path.
             </p>
         </template>
     </project-template>

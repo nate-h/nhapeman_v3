@@ -7,8 +7,8 @@
         <template v-slot:summaryText>
             <p>
                 Minesweeper was one of the first games I remade as a programmer.
-                Never played the game too much but thought it would be fun
-                to recreate and more importantly achievable.
+                Never played the game too much but thought it would be fun to
+                recreate and more importantly achievable.
             </p>
         </template>
 
@@ -24,8 +24,7 @@
         </template>
 
         <template v-slot:demoDetails>
-            <p>
-            </p>
+            <p></p>
         </template>
     </project-template>
 </template>

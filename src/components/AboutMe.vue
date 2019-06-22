@@ -6,8 +6,8 @@
                 <p>
                     Hi! I'm Nathanial Hapeman and I am a professional software
                     engineer. I've been programming for 5 years now outside of
-                    college and have worked in many different domains including: machine
-                    learning, fullstack development, simulation and game
+                    college and have worked in many different domains including:
+                    machine learning, fullstack development, simulation and game
                     development. The computer languages I have the most
                     experience with are c/c++, python and javascript but have
                     coded for fun and professionaly in many more. Outside of my
