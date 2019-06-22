@@ -8,7 +8,8 @@
             <p>
                 Minesweeper was one of the first games I remade as a programmer.
                 Never played the game too much but thought it would be fun to
-                recreate and more importantly achievable.
+                recreate and more importantly achievable. Fair warning the sound
+                effects can be jarring.
             </p>
         </template>
 
