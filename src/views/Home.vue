@@ -8,15 +8,16 @@
                 company="Applied Invention"
                 :img="require('img/ai.png')"
                 link="https://www.appliedinvention.com/"
-                years="June 2014-Present"
+                years="June 2014 - Present"
                 short-description="Software Engineer"
             >
                 <p>
-                    This is my current full time job and an amazing company! At
-                    Applied Invention, we work on creating innovative solutions
-                    for leading companies and entrepreneurs. All of the projects
+                    In short, Applied Invention is a company that helps leading
+                    companies and entrepreneurs with any challenging problem they
+                    may have. I've been lucky enough to work for AI since they
+                    hired me out of college in 2014. All of the projects
                     I've worked on have been extremely interesting and exciting
-                    to work on. The longest project I worked on was our in-house
+                    to work on. The first project I worked on was our in-house
                     geo-spacial game engine that was built for simulations. The
                     engine was written in c++ on top of panda3d, an open source
                     3D game engine. Currently I work on a machine learning
@@ -38,7 +39,7 @@
                 company="FrackOptima"
                 :img="require('img/frackoptima.png')"
                 link="http://frackoptima.com/"
-                years="May 2016-Present"
+                years="May 2016 - October 2017"
                 short-description="Software Engineer"
             >
                 <p>
@@ -88,6 +89,12 @@ export default {
 
     & > *:not(:last-child) {
         margin-bottom: $margin-large;
+    }
+
+    .job-components {
+        .job-container:not(:last-child) {
+            margin-bottom: $margin-large;
+        }
     }
 }
 </style>
