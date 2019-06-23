@@ -21,6 +21,6 @@ git add -A
 git commit -m 'deploy'
 
 # deploy
-git push -f git@github.com:nate-h/nhapeman.com_v3.git gh-pages
+git push -f git@github.com:nate-h/nhapeman_v3.git gh-pages
 
 cd -
