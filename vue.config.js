@@ -1,7 +1,6 @@
 const path = require("path");
 
 module.exports = {
-    publicPath: process.env.NODE_ENV === "production" ? "/nhapeman_v3/" : "/",
     css: {
         loaderOptions: {
             sass: {
