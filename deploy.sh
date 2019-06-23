@@ -1,25 +1,28 @@
+# deploy.sh
+
 #!/usr/bin/env sh
 
 # abort on errors
 set -e
 
 # build
+echo Linting..
+npm run lint
+echo Building. this may take a minute...
 npm run build
 
 # navigate into the build output directory
 cd dist
 
 # if you are deploying to a custom domain
-echo 'nhapeman.com' > CNAME
+# echo 'example.com' > CNAME
 
+echo Deploying..
 git init
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io
-git push -f git@github.com:nate-h/nate-h.github.io.git master
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+# deploy
+git push -f git@github.com:<username>/<repo>.git <branch>
 
 cd -
