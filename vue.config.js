@@ -1,6 +1,7 @@
 const path = require("path");
 
 module.exports = {
+    publicPath: "nhapeman.com_v3",
     css: {
         loaderOptions: {
             sass: {
