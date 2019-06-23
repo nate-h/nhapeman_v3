@@ -13,9 +13,9 @@
             >
                 <p>
                     In short, Applied Invention is a company that helps leading
-                    companies and entrepreneurs with any challenging problem they
-                    may have. I've been lucky enough to work for AI since they
-                    hired me out of college in 2014. All of the projects
+                    companies and entrepreneurs with any challenging problem
+                    they may have. I've been lucky enough to work for AI since
+                    they hired me out of college in 2014. All of the projects
                     I've worked on have been extremely interesting and exciting
                     to work on. The first project I worked on was our in-house
                     geo-spacial game engine that was built for simulations. The
