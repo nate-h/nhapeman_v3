@@ -1,6 +1,6 @@
 <template>
     <header-container header="About Me">
-        <div class="about-me-container l-to-r equal lt">
+        <div class="about-me-container">
             <div class="row">
                 <h2>About Me</h2>
                 <p>
@@ -60,6 +60,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 .about-me-container {
+    @extend %l-to-r, .equal, .lt;
+
     .row {
         &:not(:first-child) {
             margin-left: $margin;
@@ -82,6 +84,16 @@ export default {
                     font-weight: $fw-bold;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: $break-large) {
+    .about-me-container {
+        @include holder("t-to-b", "lt");
+
+        .row:not(:last-child) {
+            margin-bottom: $margin-large;
         }
     }
 }

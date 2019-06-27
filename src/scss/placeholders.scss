@@ -53,6 +53,40 @@
     flex-direction: column-reverse;
 }
 
+@mixin holder($direction: "l-to-r", $ta: "ct", $a: "") {
+
+    // Base styles.
+    display: flex;
+    flex-wrap: nowrap;
+
+    // Handle direction to put elements.
+    @if $direction == 'l-to-r' {
+        flex-direction: row;
+    } @else if $direction == 't-to-b' {
+        flex-direction: column;
+    } @else if $direction == 'r-to-l' {
+        flex-direction: row;
+        flex-direction: row-reverse;
+    } @else if $direction == 'b-to-t' {
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+
+    // Handle text alignment
+    @if $ta == 'ct' {
+        text-align: center;
+    } @else if $ta == 'lt' {
+        text-align: left;
+    } @else if $ta == 'rt' {
+        text-align: right;
+    }
+
+    // Handle text alignment
+    @if $a == 'ca' {
+        align-items: center;
+    }
+}
+
 ////////////////////////////////////////////////////////////////////////
 // Misc
 ////////////////////////////////////////////////////////////////////////
