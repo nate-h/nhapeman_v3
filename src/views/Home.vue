@@ -97,4 +97,10 @@ export default {
         }
     }
 }
+
+@media screen and (max-width: $break-large) {
+    .home {
+        padding: $padding-large 0;
+    }
+}
 </style>

@@ -1,14 +1,14 @@
 <template>
     <div class="project-template">
         <!-- Summary -->
-        <div class="summary-template l-to-r lt" v-if="showSummary()">
-            <div class="leftside">
+        <div class="summary-template" v-if="showSummary()">
+            <div class="summary-image">
                 <router-link :to="'/projects/' + path" class="link" v-if="path">
                     <slot name="summaryImage" class="thumbnail"></slot>
                 </router-link>
                 <slot name="summaryImage" class="thumbnail" v-if="!path"></slot>
             </div>
-            <div class="rightside">
+            <div class="summary-content">
                 <div class="header">
                     <h1 class="title">{{ title }}</h1>
                     <span class="description">{{ description }}</span>
@@ -104,13 +104,19 @@ $img-side: 200px;
     .header {
         .title {
             display: inline-block;
+            grid-area: title;
         }
 
         .description {
             @extend %default-size;
             color: $dark3;
             font-weight: bold;
+            grid-area: description;
             margin-left: $margin;
+        }
+
+        .link {
+            grid-area: link;
         }
     }
 
@@ -128,7 +134,9 @@ $img-side: 200px;
     }
 
     .summary-template {
-        .leftside {
+        @extend %l-to-r, .lt;
+
+        .summary-image {
             @extend %l-to-r, .ca;
             flex-grow: 0;
             flex-shrink: 0;
@@ -144,17 +152,40 @@ $img-side: 200px;
             }
         }
 
-        .rightside {
-            flex-grow: 1;
-
+        .summary-content {
             .header {
-                @extend %l-to-r, .ca;
-                margin-bottom: $margin-small;
-
                 .link {
                     margin-left: auto;
                     @extend %router-link;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $break-large) {
+    .project-template {
+        padding: $padding-large;
+        .summary-template {
+            @include holder("t-to-b", "lt", "ca");
+
+            .header {
+                display: grid;
+                grid-template-areas:
+                    "title title"
+                    "description link";
+                grid-gap: 10px;
+                padding: 10px;
+                margin-bottom: $margin-large;
+            }
+        }
+
+        .demo-template {
+            margin: 0;
+
+            .text {
+                padding: 0;
+                text-align: left;
             }
         }
     }
