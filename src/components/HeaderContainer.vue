@@ -28,7 +28,7 @@ export default {
     & > .header {
         background-color: $light1;
         padding: $padding-large;
-        z-index: 999;
+        z-index: 1;
     }
 
     & > .body {

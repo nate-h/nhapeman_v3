@@ -1,5 +1,5 @@
 <template>
-    <header class="nav-bar l-to-r">
+    <header class="nav-bar">
         <!-- Logo -->
         <div class="logo-blob">
             <img src="~img/logo.png" class="logo" />
@@ -84,46 +84,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-.dropdown {
-    vertical-align: middle;
-    position: relative;
-
-    .label {
-        @extend %l-to-r, .ca;
-    }
-
-    .list {
-        @extend %t-to-b;
-        color: white;
-        display: none;
-        background-color: $dark1;
-        flex-wrap: nowrap;
-        font-size: 2rem;
-        padding: $padding;
-        position: absolute;
-        right: 0;
-        white-space: nowrap;
-        z-index: 1;
-
-        & > *:not(:last-child) {
-            margin-bottom: $margin;
-        }
-    }
-
-    &:hover {
-        background-color: $dark1;
-        .list {
-            display: flex;
-        }
-
-        .label svg {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-        }
-    }
-}
-
 .nav-bar {
+    @include holder("r-to-r");
     background-color: $dark0;
     padding: $padding;
 
@@ -157,6 +119,55 @@ export default {
         @extend %l-to-r, .ca;
 
         margin-left: auto;
+    }
+}
+
+.dropdown {
+    vertical-align: middle;
+    position: relative;
+
+    .label {
+        @extend %l-to-r, .ca;
+    }
+
+    .list {
+        @extend %t-to-b;
+        color: white;
+        display: none;
+        background-color: $dark1;
+        flex-wrap: nowrap;
+        font-size: 2rem;
+        padding: $padding;
+        position: absolute;
+        right: 0;
+        white-space: nowrap;
+        z-index: 2;
+
+        & > *:not(:last-child) {
+            margin-bottom: $margin;
+        }
+    }
+
+    &:hover {
+        background-color: $dark1;
+        .list {
+            display: flex;
+        }
+
+        .label svg {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+    }
+}
+
+@media screen and (max-width: $break-large) {
+    .nav-bar {
+        @include holder("t-to-b", "lt", "ca");
+
+        .link-holder {
+            margin-left: 0;
+        }
     }
 }
 </style>

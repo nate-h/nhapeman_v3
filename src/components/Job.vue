@@ -54,4 +54,10 @@ $img-side: 200px;
         width: 200px;
     }
 }
+
+@media screen and (max-width: $break-large) {
+    .job-container {
+        @include holder("t-to-b", "lt", "ca");
+    }
+}
 </style>

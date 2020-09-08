@@ -57,4 +57,10 @@ export default {
         }
     }
 }
+
+@media screen and (max-width: $break-large) {
+    .projects {
+        padding: $padding-large 0;
+    }
+}
 </style>

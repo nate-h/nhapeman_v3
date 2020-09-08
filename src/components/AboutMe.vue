@@ -1,13 +1,13 @@
 <template>
     <header-container header="About Me">
-        <div class="about-me-container l-to-r equal lt">
+        <div class="about-me-container">
             <div class="row">
                 <h2>About Me</h2>
                 <p>
                     Hi! I'm Nathanial Hapeman and I am a professional software
-                    engineer. Going on 5 years of working in the industry and
-                    have worked in many different domains including: machine
-                    learning, fullstack development, simulation and game
+                    engineer. I've been programming for 5 years now outside of
+                    college and have worked in many different domains including:
+                    machine learning, fullstack development, simulation and game
                     development. The computer languages I have the most
                     experience with are c/c++, python and javascript but have
                     coded for fun and professionaly in many more. Outside of my
@@ -60,6 +60,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 .about-me-container {
+    @extend %l-to-r, .equal, .lt;
+
     .row {
         &:not(:first-child) {
             margin-left: $margin;
@@ -82,6 +84,16 @@ export default {
                     font-weight: $fw-bold;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: $break-large) {
+    .about-me-container {
+        @include holder("t-to-b", "lt");
+
+        .row:not(:last-child) {
+            margin-bottom: $margin-large;
         }
     }
 }

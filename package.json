@@ -11,24 +11,24 @@
   },
   "dependencies": {
     "prismjs": "^1.16.0",
-    "vue": "^2.6.6",
-    "vue-router": "^3.0.1"
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.6"
   },
   "devDependencies": {
-    "@vue/cli-plugin-e2e-cypress": "^3.4.0",
-    "@vue/cli-plugin-eslint": "^3.4.0",
-    "@vue/cli-plugin-unit-jest": "^3.5.3",
-    "@vue/cli-service": "^3.5.3",
+    "@vue/cli-plugin-e2e-cypress": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-plugin-unit-jest": "^3.8.0",
+    "@vue/cli-service": "^3.8.4",
     "@vue/eslint-config-prettier": "^4.0.1",
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.14.1",
+    "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.2",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.12.0",
     "raw-loader": "^2.0.0",
     "sass-loader": "^7.0.1",
     "vue-prism-component": "^1.1.1",
     "vue-svg-loader": "^0.11.0",
-    "vue-template-compiler": "^2.6.6"
+    "vue-template-compiler": "^2.6.10"
   }
 }

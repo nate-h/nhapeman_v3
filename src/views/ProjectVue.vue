@@ -67,11 +67,16 @@
                 order in places that create cleaner more manageable code. An
                 example of this are the properties you can define when creating
                 a component. These properties like watch, props, methods and
-                data provide a formal place to group similar items. This differs
-                from AngularJS because there's no formal place to define
-                something like a watcher in an Angular JS controller. Just
-                define whereever you like in the controller function or anywhere
-                else if you have a handle to that controllers score.
+                data provide a formal place to group similar items. Vue also
+                provides life cycle hooks that allow you to do stuff at the
+                precise time in the component creation. AngularJS has some
+                formal ways to group common functionality and even provides some
+                life cycle hooks but it's very minimal. Looking back at most of
+                the controllers I wrote, they all would have benefitted by
+                having one place to define the watchers or one place to define
+                scope variables. I still developed my own standards to attempt
+                to have that behavior but it would have been much easier/
+                cleaner if the standard was built into the framework.
             </p>
             <p>
                 Another great feature Vue has is the ability to define a
@@ -84,13 +89,12 @@
                 simply have the Javascript, CSS, and HTML stuffed into 1 file as
                 opposed to 3 seperate files. The beauty of this feature is that
                 developers are more incentivised to break up their code into
-                smaller pieces if you're only adding 1 file as opposed to three.
-                I find it annoying when you want to create a small component but
-                need to create 3 files for your css/js/html that have 0-30 lines
-                each. Being able to throw all 3 snippets into one file makes it
-                so: you're not overwhlemed by number of files, you can bounce
-                around all the code faster since it's contained in one file,
-                delete the component with ease.
+                smaller pieces. I find it annoying when you want to create a
+                small component but need to create 3 files for your css/js/html
+                that have 30 lines each. Being able to throw all 3 snippets into
+                one file makes it so: you're not overwhlemed by number of files,
+                you can bounce around the code faster since it's all in one
+                file, delete the component easier.
             </p>
             <p>
                 The last thing I like about Vue is how easy it is to dive into
