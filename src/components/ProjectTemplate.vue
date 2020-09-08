@@ -103,7 +103,6 @@ $img-side: 200px;
     width: 100%;
 
     .header {
-
         margin: $margin 0;
 
         .title {
