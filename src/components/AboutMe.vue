@@ -5,16 +5,18 @@
                 <h2>About Me</h2>
                 <p>
                     Hi! I'm Nathanial Hapeman and I am a professional software
-                    engineer. I've been programming for 6 years now outside of
-                    college and have worked in many different domains including:
-                    machine learning, fullstack development, simulation and game
-                    development. The computer languages I have the most
-                    experience with are c/c++, python and javascript but have
-                    coded for fun and professionaly in many more. Outside of my
-                    professional career, I enjoy hiking, table tennis,
-                    netflexing, and having a good time with friends. Always
-                    interested in meeting new people and learning something new
-                    so send me an email if you want to get in touch.
+                    engineer. I've been programming for
+                    {{ years_of_experience() }}
+                    years now outside of college and have worked in many
+                    different domains including: machine learning, fullstack
+                    development, simulation and game development. The computer
+                    languages I have the most experience with are c/c++, python
+                    and javascript but have coded for fun and professionaly in
+                    many more. Outside of my professional career, I enjoy
+                    hiking, table tennis, netflexing, and having a good time
+                    with friends. Always interested in meeting new people and
+                    learning something new so send me an email if you want to
+                    get in touch.
                 </p>
             </div>
             <div class="row">
@@ -50,6 +52,12 @@ export default {
         my_rough_age() {
             var bday = new Date("1990-03-01");
             var ageDifMs = Date.now() - bday.getTime();
+            var ageDate = new Date(ageDifMs);
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
+        },
+        years_of_experience() {
+            var firstJobDate = new Date("2014-06-01");
+            var ageDifMs = Date.now() - firstJobDate.getTime();
             var ageDate = new Date(ageDifMs);
             return Math.abs(ageDate.getUTCFullYear() - 1970);
         }
