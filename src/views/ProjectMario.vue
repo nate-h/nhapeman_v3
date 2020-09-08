@@ -15,8 +15,7 @@
                 so that I started borrowing assets from other games. It was an
                 amazing learning experience to teach me c++ and polymorphism. It
                 was also a good introduction to data structures, memory
-                management, and threading. Click <span class="red">Demo</span>
-                to see the result!
+                management, and threading.
             </p>
         </template>
 

@@ -94,12 +94,12 @@
             </p>
             <p>
                 The last thing I like about Vue is how easy it is to dive into
-                it. The first step of learning anything new is getting your foot in
-                the door and with the Vue CLI, it's that much easier to get started with Vue.
-                Using the client, it takes 4 lines to get a local website up and running.
-                And while configuring a new project, you can choose between many popular 
-                options for things like linters and testing frameworks.
-                Get started today with:
+                it. The first step of learning anything new is getting your foot
+                in the door and with the Vue CLI, it's that much easier to get
+                started with Vue. Using the client, it takes 4 lines to get a
+                local website up and running. And while configuring a new
+                project, you can choose between many popular options for things
+                like linters and testing frameworks. Get started today with:
                 <snippet lang="bash">{{ VueSiteSetup }}</snippet>
             </p>
         </template>

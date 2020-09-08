@@ -19,6 +19,7 @@
 
 <script>
 import ProjectMario from "@/views/ProjectMario.vue";
+import ProjectWhirling from "@/views/ProjectWhirling.vue";
 import ProjectMinesweeper from "@/views/ProjectMinesweeper.vue";
 import ProjectMyTunes from "@/views/ProjectMyTunes.vue";
 import ProjectVue from "@/views/ProjectVue.vue";
@@ -29,6 +30,7 @@ export default {
     created() {
         this.projects = [
             ProjectMario,
+            ProjectWhirling,
             ProjectPixelChaser,
             ProjectVue,
             ProjectMyTunes,

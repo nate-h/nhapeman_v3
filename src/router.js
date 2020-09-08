@@ -5,6 +5,7 @@ import Resume from "./views/Resume.vue";
 import Projects from "./views/Projects.vue";
 
 import ProjectMario from "./views/ProjectMario.vue";
+import ProjectWhirling from "./views/ProjectWhirling.vue";
 import ProjectMinesweeper from "./views/ProjectMinesweeper.vue";
 import ProjectMyTunes from "./views/ProjectMyTunes.vue";
 import ProjectVue from "./views/ProjectVue.vue";
@@ -14,6 +15,7 @@ import ProjectPixelChaser from "./views/ProjectPixelChaser.vue";
 // Setup child routes for projects.
 let projectComponents = [
     ProjectMario,
+    ProjectWhirling,
     ProjectMinesweeper,
     ProjectMyTunes,
     ProjectVue,
