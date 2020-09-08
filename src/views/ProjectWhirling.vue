@@ -45,52 +45,56 @@
                 and 4->6 use the same colors to represent the separated source
                 that's heard. See color key below for color mappings.
             </p>
-            <p>Brief description of each visualizer:</p>
+            <h2>Brief description of each visualizer</h2>
             <ol>
                 <li>
-                    combo_board: Uses both
-            spectrograms and features to render a grid of squares. Each
-            illuminated square represents a certain frequency range heard.
-            Squares near the top right of the screen map to higher
-            frequencies. The color of that square represents what source it
-            came from.
+                    combo_board: Uses both spectrograms and features to render a
+                    grid of squares. Each illuminated square represents a
+                    certain frequency range heard. Squares near the top right of
+                    the screen map to higher frequencies. The color of that
+                    square represents what source it came from.
                 </li>
                 <li>
-                    debug: Shows all features generated for current
-            source separation plan.
+                    debug: Shows all features generated for current source
+                    separation plan.
                 </li>
                 <li>
-                    spectrogram: Shows all spectrograms
-            generated for current source separation plan.
+                    spectrogram: Shows all spectrograms generated for current
+                    source separation plan.
                 </li>
                 <li>
-                    concentric_squares: Uses the source separated spectrograms to
-            render concentric square rings that represent what frequency is
-            being played. The bigger the ring, the higher the frequency.
-            Ring color matches source heard. This visualizer combines colors
-            if 2+ sources are playing the same frequency.
+                    concentric_squares: Uses the source separated spectrograms
+                    to render concentric square rings that represent what
+                    frequency is being played. The bigger the ring, the higher
+                    the frequency. Ring color matches source heard. This
+                    visualizer combines colors if 2+ sources are playing the
+                    same frequency.
                 </li>
                 <li>
                     stacked_equalizers: Show all frequencies heard with no
-            adjustments.
+                    adjustments.
                 </li>
                 <li>
-                    checkerboard: same as combo_board but with no use of features and much less filtering.
+                    checkerboard: same as combo_board but with no use of
+                    features and much less filtering.
                 </li>
             </ol>
-            <h2>TLDR - I built a music visualizer</h2>
             <p>
                 Code
                 <a href="https://github.com/nate-h/Whirling">
                     https://github.com/nate-h/Whirling</a
                 >
             </p>
-            <p>The colors map to separated sources. Here's the key:</p>
+            <h2>TLDR - I built a music visualizer</h2>
+            <p>
+                The colors map to separated sources. <br />
+                Here's the key:
+            </p>
             <ul>
-                <li>Green -> vocals</li>
-                <li>Blue -> other (piano, guitar, etc.)</li>
-                <li>Red -> Drums</li>
-                <li>Purple -> Bass</li>
+                <li style="color:green;">Green -> vocals</li>
+                <li style="color:blue;">Blue -> other (piano, guitar, etc.)</li>
+                <li style="color:red;">Red -> Drums</li>
+                <li style="color:purple;">Purple -> Bass</li>
             </ul>
         </template>
     </project-template>

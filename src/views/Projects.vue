@@ -52,8 +52,19 @@ export default {
     }
 
     .project-child {
+        h1,
+        h2,
+        h3 {
+            margin: $margin-medium 0;
+        }
         p {
             margin: $margin-medium 0;
+        }
+        ol {
+            padding-left: $padding-large;
+        }
+        li {
+            padding-bottom: $padding;
         }
     }
 }
