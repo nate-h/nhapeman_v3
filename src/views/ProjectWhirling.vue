@@ -62,7 +62,12 @@
                 use of features and much less filtering.
             </p>
             <h2>TLDR - I built a music visualizer</h2>
-            <p>Code <a href="https://github.com/nate-h/Whirling"> https://github.com/nate-h/Whirling</a></p>
+            <p>
+                Code
+                <a href="https://github.com/nate-h/Whirling">
+                    https://github.com/nate-h/Whirling</a
+                >
+            </p>
             <p>The colors map to separated sources. Here's the key:</p>
             <ul>
                 <li>Green -> vocals</li>
@@ -90,7 +95,7 @@ export default {
 </script>
 
 <style lang="scss">
-    ul {
-        list-style: none;
-    }
+ul {
+    list-style: none;
+}
 </style>
