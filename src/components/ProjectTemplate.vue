@@ -12,14 +12,15 @@
                 <div class="header">
                     <h1 class="title">{{ title }}</h1>
                     <span class="description">{{ description }}</span>
-
-                    <router-link :to="'/projects/' + path" class="link">
-                        <span>{{ moreInfoButtonText }}</span>
-                    </router-link>
                 </div>
                 <div>
                     <slot name="summaryText"></slot>
                 </div>
+                <h2 class="footer">
+                    <router-link :to="'/projects/' + path" class="link">
+                        <span>{{ moreInfoButtonText }}</span>
+                    </router-link>
+                </h2>
             </div>
         </div>
 
@@ -102,22 +103,24 @@ $img-side: 200px;
     width: 100%;
 
     .header {
+
+        margin: $margin 0;
+
         .title {
             display: inline-block;
-            grid-area: title;
         }
 
         .description {
             @extend %default-size;
             color: $dark3;
             font-weight: bold;
-            grid-area: description;
             margin-left: $margin;
         }
+    }
 
-        .link {
-            grid-area: link;
-        }
+    .footer {
+        margin: $margin 0;
+        @extend %default-size;
     }
 
     .demo-template {
@@ -170,13 +173,12 @@ $img-side: 200px;
             @include holder("t-to-b", "lt", "ca");
 
             .header {
-                display: grid;
-                grid-template-areas:
-                    "title title"
-                    "description link";
-                grid-gap: 10px;
-                padding: 10px;
-                margin-bottom: $margin-large;
+                .title {
+                    display: block;
+                }
+                .description {
+                    margin-left: 0;
+                }
             }
         }
 
