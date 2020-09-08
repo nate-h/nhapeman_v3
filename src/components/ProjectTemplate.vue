@@ -14,7 +14,7 @@
                     <span class="description">{{ description }}</span>
 
                     <router-link :to="'/projects/' + path" class="link">
-                        <span>{{ buttonText }}</span>
+                        <span>{{ moreInfoButtonText }}</span>
                     </router-link>
                 </div>
                 <div>
@@ -64,8 +64,8 @@ export default {
         description: function() {
             return this.$parent.description;
         },
-        buttonText: function() {
-            return this.$parent.buttonText;
+        moreInfoButtonText: function() {
+            return this.$parent.moreInfoButtonText;
         }
     },
     created: function() {
@@ -79,7 +79,7 @@ export default {
             }
         }
 
-        let neededOverrides = ["title", "description", "buttonText"];
+        let neededOverrides = ["title", "description", "moreInfoButtonText"];
         for (let prop of neededOverrides) {
             if (
                 this.$parent[prop] === null ||

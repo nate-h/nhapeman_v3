@@ -44,7 +44,7 @@ export default {
         return {
             title: "Pixel Chaser",
             description: "Javascript",
-            buttonText: "Demo"
+            moreInfoButtonText: "Demo"
         };
     }
 };

@@ -109,7 +109,7 @@ export default {
         return {
             title: "Whirling: Audio visualizer that uses AI",
             description: "Librosa, OpenGL, Python",
-            buttonText: "Demo"
+            moreInfoButtonText: "Demo"
         };
     }
 };

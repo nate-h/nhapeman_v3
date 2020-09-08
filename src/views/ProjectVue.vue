@@ -121,7 +121,7 @@ export default {
         return {
             title: "My thoughts on learning Vue",
             description: "Vue, Sass",
-            buttonText: "Read More",
+            moreInfoButtonText: "Read More",
             VueSiteSetup: VueSiteSetup
         };
     },

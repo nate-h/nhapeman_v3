@@ -46,7 +46,7 @@ export default {
         return {
             title: "Super Mario Bros Reloaded",
             description: "C++ with SDL",
-            buttonText: "Demo"
+            moreInfoButtonText: "Demo"
         };
     }
 };

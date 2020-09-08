@@ -39,7 +39,7 @@ export default {
         return {
             title: "Minesweeper Remake",
             description: "Javascript",
-            buttonText: "Play"
+            moreInfoButtonText: "Play"
         };
     }
 };

@@ -59,7 +59,7 @@ export default {
         return {
             title: "MyTunes, a music player",
             description: "Java and JavaZOOM",
-            buttonText: "Demo"
+            moreInfoButtonText: "Demo"
         };
     }
 };

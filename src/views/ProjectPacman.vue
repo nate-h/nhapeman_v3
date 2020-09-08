@@ -57,7 +57,7 @@ export default {
         return {
             title: "Pacman Remake",
             description: "Javascript",
-            buttonText: "Play"
+            moreInfoButtonText: "Play"
         };
     }
 };
