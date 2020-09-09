@@ -107,8 +107,8 @@ export default {
     listed: true,
     data() {
         return {
-            title: "Whirling: Audio visualizer that uses AI",
-            description: "Librosa, OpenGL, Python",
+            title: "Whirling: an AI-driven audio visualizer",
+            description: "Librosa, OpenGL, Python, Spleeter",
             moreInfoButtonText: "Demo"
         };
     }

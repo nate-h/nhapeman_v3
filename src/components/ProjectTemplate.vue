@@ -122,19 +122,6 @@ $img-side: 200px;
         @extend %default-size;
     }
 
-    .demo-template {
-        margin: 0 $margin-xxx-large;
-
-        .header {
-            margin-bottom: $margin-large;
-        }
-
-        .text {
-            padding: $padding-x-large;
-            text-align: left;
-        }
-    }
-
     .summary-template {
         @extend %l-to-r, .lt;
 
@@ -163,22 +150,36 @@ $img-side: 200px;
             }
         }
     }
+
+    .demo-template {
+        margin: 0 $margin-xxx-large;
+
+        .header {
+            margin-bottom: $margin-large;
+        }
+
+        .text {
+            padding: $padding-x-large;
+            text-align: left;
+        }
+    }
 }
 
 @media screen and (max-width: $break-large) {
     .project-template {
         padding: $padding-large;
+
+        .header {
+            .title {
+                display: block;
+            }
+            .description {
+                margin-left: 0;
+            }
+        }
+
         .summary-template {
             @include holder("t-to-b", "lt", "ca");
-
-            .header {
-                .title {
-                    display: block;
-                }
-                .description {
-                    margin-left: 0;
-                }
-            }
         }
 
         .demo-template {
