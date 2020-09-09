@@ -13,6 +13,16 @@ html, body {
     margin: 0
 }
 
+@supports (-webkit-overflow-scrolling: touch) {
+    body {
+      // fix event bubbling
+      cursor: pointer;
+      // prevent flashes when tapping the body
+      // you may also need to add this rule on other page wrapping elements depending on your markup
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+
 html {
     box-sizing: border-box;
     font-family: $text-font-stack;
