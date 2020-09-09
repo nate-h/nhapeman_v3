@@ -27,6 +27,7 @@ export default {
 <style lang="scss">
 .resume {
     display: flex;
+    width: 100%;
 
     .pdf {
         width: 100%;
