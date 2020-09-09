@@ -15,7 +15,7 @@
         <div class="link-holder l-to-r">
             <div v-for="link in routes" :key="link.name">
                 <!-- Routes with dropsdown -->
-                <div class="dropdown" v-if="hasChildren(link)">
+                <div class="dropdown" v-if="hasChildren(link)" onclick="">
                     <div class="label">
                         <router-link class="router-link" :to="link.path">
                             <span>{{ link.name }}</span>
