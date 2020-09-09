@@ -1,7 +1,7 @@
 <template>
     <project-template>
         <template v-slot:summaryImage>
-            <img src="~img/mario.png" />
+            <img src="~img/mario.jpg" />
         </template>
 
         <template v-slot:summaryText>
