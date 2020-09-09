@@ -14,14 +14,11 @@ html, body {
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
-    body {
-      // fix event bubbling
-      cursor: pointer;
-      // prevent flashes when tapping the body
-      // you may also need to add this rule on other page wrapping elements depending on your markup
-      -webkit-tap-highlight-color: transparent;
+/* CSS specific to iOS devices */
+    * {
+        cursor: pointer;
     }
-  }
+}
 
 html {
     box-sizing: border-box;
