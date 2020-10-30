@@ -7,13 +7,14 @@
         <template v-slot:summaryText>
             <p>
                 Before I got into streaming, I had a pretty big music
-                collection. I was really into making playlists but was frustrated
-                at how iTunes didn't have the best UI for managing playlists.
-                Trying to improve my coding skills, I thought it would be fun to
-                create my own version of iTunes with some cool features for
-                managing playlists. So I created MyTunes. In creating it, I
-                learned a good amount about multithread synchronization, object
-                serialization, regex filters, swing components
+                collection. I was really into making playlists but was
+                frustrated at how iTunes didn't have the best UI for managing
+                playlists. Trying to improve my coding skills, I thought it
+                would be fun to create my own version of iTunes with some cool
+                features for managing playlists. So I created MyTunes. In
+                creating it, I learned a good amount about multithread
+                synchronization, object serialization, regex filters, swing
+                components
             </p>
         </template>
 
