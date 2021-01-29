@@ -1,10 +1,18 @@
 <template>
     <div class="resume">
-        <embed
+        <!-- <embed
             class="pdf"
             :src="require('subs/resume/Nathanial.Hapeman.Resume.pdf')"
             type="application/pdf"
-        />
+        /> -->
+
+        <iframe
+            id="ifamePdf"
+            type="application/pdf"
+            scrolling="auto"
+            :src="require('subs/resume/Nathanial.Hapeman.Resume.pdf')"
+            width="100%"
+        ></iframe>
     </div>
 </template>
 
