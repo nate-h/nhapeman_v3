@@ -19,13 +19,19 @@
         </template>
 
         <template v-slot:demo>
-            <div style="position:relative;padding-top:75%;">
+            <div style="position: relative; padding-top: 75%">
                 <iframe
                     src="https://player.vimeo.com/video/454955980"
                     frameborder="0"
                     allow="autoplay; fullscreen"
                     allowfullscreen
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                    style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    "
                 >
                 </iframe>
             </div>
@@ -91,10 +97,10 @@
                 Here's the key:
             </p>
             <ul>
-                <li style="color:green;">Green -> vocals</li>
-                <li style="color:blue;">Blue -> other (piano, guitar, etc.)</li>
-                <li style="color:red;">Red -> Drums</li>
-                <li style="color:purple;">Purple -> Bass</li>
+                <li style="color: green">Green -> vocals</li>
+                <li style="color: blue">Blue -> other (piano, guitar, etc.)</li>
+                <li style="color: red">Red -> Drums</li>
+                <li style="color: purple">Purple -> Bass</li>
             </ul>
         </template>
     </project-template>
@@ -109,9 +115,9 @@ export default {
         return {
             title: "Whirling: an AI-driven audio visualizer",
             description: "Librosa, OpenGL, Python, Spleeter",
-            moreInfoButtonText: "Demo"
+            moreInfoButtonText: "Demo",
         };
-    }
+    },
 };
 </script>
 

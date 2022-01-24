@@ -45,31 +45,31 @@
 export default {
     name: "ProjectTemplate",
     methods: {
-        showSummary: function() {
+        showSummary: function () {
             return this.$parent.$route.name !== this.name;
         },
-        showDemo: function() {
+        showDemo: function () {
             return this.$parent.$route.name === this.name;
-        }
+        },
     },
     computed: {
-        path: function() {
+        path: function () {
             return this.$parent.$options.path;
         },
-        name: function() {
+        name: function () {
             return this.$parent.$options.name;
         },
-        title: function() {
+        title: function () {
             return this.$parent.title;
         },
-        description: function() {
+        description: function () {
             return this.$parent.description;
         },
-        moreInfoButtonText: function() {
+        moreInfoButtonText: function () {
             return this.$parent.moreInfoButtonText;
-        }
+        },
     },
-    created: function() {
+    created: function () {
         let neededOptions = ["name", "path", "listed"];
         for (const prop of neededOptions) {
             if (
@@ -89,7 +89,7 @@ export default {
                 console.error(`Need to override ${prop}`);
             }
         }
-    }
+    },
 };
 </script>
 

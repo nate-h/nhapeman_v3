@@ -9,13 +9,13 @@ import Prism from "vue-prism-component";
 
 export default {
     components: {
-        Prism
+        Prism,
     },
     props: {
         lang: {
             type: String,
-            default: "javascript"
-        }
-    }
+            default: "javascript",
+        },
+    },
 };
 </script>

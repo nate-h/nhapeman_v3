@@ -8,7 +8,8 @@
             :src="require('subs/resume/Nathanial.Hapeman.Resume.pdf')"
         /> -->
 
-        <iframe src="https://drive.google.com/file/d/1EITc-fPHTZMSd7i7PxE6OetYMn7fFuMq/preview"
+        <iframe
+            src="https://drive.google.com/file/d/1EITc-fPHTZMSd7i7PxE6OetYMn7fFuMq/preview"
             class="pdf"
             frameBorder="0"
             scrolling="auto"
@@ -21,7 +22,7 @@ export default {
     name: "Resume",
     created() {
         //this.$store.commit("setLinks", this.links);
-    }
+    },
 };
 </script>
 

@@ -4,19 +4,19 @@ module.exports = {
     css: {
         loaderOptions: {
             sass: {
-                data: `@import "@/scss/main.scss";`
-            }
-        }
+                data: `@import "@/scss/main.scss";`,
+            },
+        },
     },
-    chainWebpack: config => {
+    chainWebpack: (config) => {
         config.module.rules.delete("svg").end();
     },
     configureWebpack: {
         resolve: {
             alias: {
                 img: path.resolve(__dirname, "src/assets/images"),
-                subs: path.resolve(__dirname, "submodules")
-            }
+                subs: path.resolve(__dirname, "submodules"),
+            },
         },
         module: {
             rules: [
@@ -26,16 +26,16 @@ module.exports = {
                         {
                             loader: "url-loader",
                             options: {
-                                name: "files/[name].[hash:8].[ext]"
-                            }
-                        }
-                    ]
+                                name: "files/[name].[hash:8].[ext]",
+                            },
+                        },
+                    ],
                 },
                 {
                     test: /\.svg$/,
-                    loader: "vue-svg-loader"
-                }
-            ]
-        }
-    }
+                    loader: "vue-svg-loader",
+                },
+            ],
+        },
+    },
 };

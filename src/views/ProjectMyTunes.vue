@@ -19,13 +19,19 @@
         </template>
 
         <template v-slot:demo>
-            <div style="position:relative;padding-top:56.25%;">
+            <div style="position: relative; padding-top: 56.25%">
                 <iframe
                     src="https://www.youtube.com/embed/1c4erMvMnVQ"
                     frameborder="0"
                     allow="autoplay; encrypted-media"
                     allowfullscreen
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                    style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    "
                 ></iframe>
             </div>
         </template>
@@ -60,9 +66,9 @@ export default {
         return {
             title: "MyTunes: a music player",
             description: "Java and JavaZOOM",
-            moreInfoButtonText: "Demo"
+            moreInfoButtonText: "Demo",
         };
-    }
+    },
 };
 </script>
 

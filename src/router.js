@@ -20,7 +20,7 @@ let projectComponents = [
     ProjectMyTunes,
     ProjectVue,
     ProjectPacman,
-    ProjectPixelChaser
+    ProjectPixelChaser,
 ];
 
 let projectRoutes = [];
@@ -29,7 +29,7 @@ for (let p of projectComponents) {
         path: p.path,
         name: p.name,
         component: p,
-        listed: p.listed
+        listed: p.listed,
     });
 }
 
@@ -40,18 +40,18 @@ export default new Router({
         {
             path: "/",
             name: "Home",
-            component: Home
+            component: Home,
         },
         {
             path: "/resume",
             name: "Resume",
-            component: Resume
+            component: Resume,
         },
         {
             path: "/projects",
             name: "Projects",
             component: Projects,
-            children: projectRoutes
-        }
-    ]
+            children: projectRoutes,
+        },
+    ],
 });

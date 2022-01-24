@@ -20,7 +20,7 @@
                 allow="autoplay; encrypted-media"
                 scrolling="no"
                 allowfullscreen
-                style="width:400px;height:370px;"
+                style="width: 400px; height: 370px"
             ></iframe>
         </template>
 
@@ -39,9 +39,9 @@ export default {
         return {
             title: "Minesweeper Remake",
             description: "Javascript",
-            moreInfoButtonText: "Play"
+            moreInfoButtonText: "Play",
         };
-    }
+    },
 };
 </script>
 

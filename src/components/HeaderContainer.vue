@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    props: ["header"]
+    props: ["header"],
 };
 </script>
 

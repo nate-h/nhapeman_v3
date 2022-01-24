@@ -35,10 +35,10 @@ export default {
             ProjectVue,
             ProjectMyTunes,
             ProjectPacman,
-            ProjectMinesweeper
+            ProjectMinesweeper,
         ];
-        this.projects = this.projects.filter(p => p.listed === true);
-    }
+        this.projects = this.projects.filter((p) => p.listed === true);
+    },
 };
 </script>
 

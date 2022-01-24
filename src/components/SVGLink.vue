@@ -7,7 +7,7 @@
 
 <script>
 export default {
-    props: ["link", "label", "color-off", "color-hover", "color-down"]
+    props: ["link", "label", "color-off", "color-hover", "color-down"],
 };
 </script>
 

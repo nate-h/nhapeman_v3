@@ -122,12 +122,12 @@ export default {
             title: "My thoughts on learning Vue",
             description: "Vue, Sass",
             moreInfoButtonText: "Read More",
-            VueSiteSetup: VueSiteSetup
+            VueSiteSetup: VueSiteSetup,
         };
     },
     components: {
-        vuelogo
-    }
+        vuelogo,
+    },
 };
 </script>
 

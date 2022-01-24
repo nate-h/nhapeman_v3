@@ -20,7 +20,7 @@
                 allow="autoplay; encrypted-media"
                 scrolling="no"
                 allowfullscreen
-                style="width:600px;height:430px;"
+                style="width: 600px; height: 430px"
             ></iframe>
         </template>
 
@@ -44,9 +44,9 @@ export default {
         return {
             title: "Pixel Chaser",
             description: "Javascript",
-            moreInfoButtonText: "Demo"
+            moreInfoButtonText: "Demo",
         };
-    }
+    },
 };
 </script>
 

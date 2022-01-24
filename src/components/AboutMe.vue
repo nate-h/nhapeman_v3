@@ -60,8 +60,8 @@ export default {
             var ageDifMs = Date.now() - firstJobDate.getTime();
             var ageDate = new Date(ageDifMs);
             return Math.abs(ageDate.getUTCFullYear() - 1970);
-        }
-    }
+        },
+    },
 };
 </script>
 

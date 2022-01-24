@@ -67,18 +67,18 @@ export default {
             links: [
                 { name: "About Me", link: "aboutme" },
                 { name: "Job History", link: "jobhistory" },
-                { name: "Projects", link: "projects" }
-            ]
+                { name: "Projects", link: "projects" },
+            ],
         };
     },
     components: {
         "job-container": JobContainer,
-        "about-me-container": AboutMeContainer
+        "about-me-container": AboutMeContainer,
     },
     methods: {},
     created() {
         //this.$store.commit("setLinks", this.links);
-    }
+    },
 };
 </script>
 

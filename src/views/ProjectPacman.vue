@@ -20,7 +20,7 @@
                 allow="autoplay; encrypted-media"
                 scrolling="no"
                 allowfullscreen
-                style="width:600px;height:430px;"
+                style="width: 600px; height: 430px"
             ></iframe>
         </template>
 
@@ -57,9 +57,9 @@ export default {
         return {
             title: "Pacman Remake",
             description: "Javascript",
-            moreInfoButtonText: "Play"
+            moreInfoButtonText: "Play",
         };
-    }
+    },
 };
 </script>
 

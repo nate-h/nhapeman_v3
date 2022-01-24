@@ -24,7 +24,7 @@ export default {
     data() {
         return {};
     },
-    props: ["company", "img", "link", "years", "short-description"]
+    props: ["company", "img", "link", "years", "short-description"],
 };
 </script>
 
