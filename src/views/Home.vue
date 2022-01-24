@@ -5,10 +5,22 @@
         <header-container header="Job History" class="job-components">
             <!-- Inject Job Components -->
             <job-container
+                company="HRL"
+                :img="require('img/hrl_logo.png')"
+                link="https://www.hrl.com/"
+                years="July 2021 - Present"
+                short-description="Software Engineer"
+            >
+                <p>
+                    Fullstack engineering on a quantum device testing program.
+                </p>
+                <p>Secret security clearance.</p>
+            </job-container>
+            <job-container
                 company="Applied Invention"
                 :img="require('img/ai.png')"
                 link="https://www.appliedinvention.com/"
-                years="June 2014 - Present"
+                years="June 2014 - June 2021"
                 short-description="Software Engineer"
             >
                 <p>
